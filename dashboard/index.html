@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel — Trustless Trading Agent Dashboard</title>
+    <meta name="description" content="Live monitoring dashboard for the Sentinel regime-adaptive trading agent">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="12" stroke="url(#grad)" stroke-width="2.5"/>
+                            <path d="M14 6L14 22M8 10L14 6L20 10M8 18L14 22L20 18" stroke="url(#grad)" stroke-width="1.8" stroke-linecap="round"/>
+                            <defs><linearGradient id="grad" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <h1>Sentinel</h1>
+                    <span class="badge badge-live" id="status-badge">● LIVE</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-stat">
+                    <span class="stat-label">Source</span>
+                    <span class="stat-value" id="data-source">Kraken CLI</span>
+                </div>
+                <div class="header-stat">
+                    <span class="stat-label">Chain</span>
+                    <span class="stat-value">Base L2</span>
+                </div>
+                <div class="header-stat">
+                    <span class="stat-label">Standard</span>
+                    <span class="stat-value badge-erc">ERC-8004</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Grid -->
+        <main class="dashboard-grid">
+            <!-- Equity Card -->
+            <section class="card card-equity" id="equity-card">
+                <div class="card-header">
+                    <h2>Portfolio Equity</h2>
+                    <span class="card-badge" id="risk-status">NORMAL</span>
+                </div>
+                <div class="equity-value">
+                    <span class="currency">$</span>
+                    <span id="equity-amount">10,000.00</span>
+                </div>
+                <div class="equity-metrics">
+                    <div class="metric">
+                        <span class="metric-label">Peak</span>
+                        <span class="metric-value" id="peak-equity">$10,000.00</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Drawdown</span>
+                        <span class="metric-value" id="drawdown">0.0%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Daily P&L</span>
+                        <span class="metric-value" id="daily-pnl">$0.00</span>
+                    </div>
+                </div>
+                <canvas id="equity-chart" height="120"></canvas>
+            </section>
+
+            <!-- Regime Card -->
+            <section class="card card-regime" id="regime-card">
+                <div class="card-header">
+                    <h2>Market Regime</h2>
+                </div>
+                <div class="regime-display">
+                    <div class="regime-indicator" id="regime-indicator">
+                        <div class="regime-ring"></div>
+                        <span class="regime-label" id="regime-label">SIDEWAYS</span>
+                    </div>
+                    <div class="regime-details">
+                        <div class="regime-detail">
+                            <span class="detail-label">ADX</span>
+                            <span class="detail-value" id="adx-value">16.3</span>
+                            <div class="progress-bar"><div class="progress-fill" id="adx-bar" style="width: 32%"></div></div>
+                        </div>
+                        <div class="regime-detail">
+                            <span class="detail-label">Confidence</span>
+                            <span class="detail-value" id="confidence-value">58%</span>
+                            <div class="progress-bar"><div class="progress-fill confidence-fill" id="confidence-bar" style="width: 58%"></div></div>
+                        </div>
+                        <div class="regime-detail">
+                            <span class="detail-label">Active Strategy</span>
+                            <span class="detail-value strategy-tag" id="active-strategy">Mean Reversion</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Signals Card -->
+            <section class="card card-signals">
+                <div class="card-header">
+                    <h2>Live Signals</h2>
+                    <span class="iteration-count" id="iteration-count">Iteration #0</span>
+                </div>
+                <div class="signals-list" id="signals-list">
+                    <div class="signal-item">
+                        <div class="signal-header">
+                            <span class="signal-symbol">BTCUSD</span>
+                            <span class="signal-action signal-hold">HOLD</span>
+                        </div>
+                        <div class="signal-body">
+                            <span class="signal-price">$67,450.40</span>
+                            <span class="signal-strategy">Mean Reversion</span>
+                        </div>
+                        <div class="signal-reasoning">RSI=57.2, %B=0.68 — no extreme</div>
+                    </div>
+                    <div class="signal-item">
+                        <div class="signal-header">
+                            <span class="signal-symbol">ETHUSD</span>
+                            <span class="signal-action signal-hold">HOLD</span>
+                        </div>
+                        <div class="signal-body">
+                            <span class="signal-price">$2,063.96</span>
+                            <span class="signal-strategy">Mean Reversion</span>
+                        </div>
+                        <div class="signal-reasoning">RSI=57.8, %B=0.66 — no extreme</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ERC-8004 Status Card -->
+            <section class="card card-chain">
+                <div class="card-header">
+                    <h2>ERC-8004 Status</h2>
+                    <span class="card-badge badge-chain">ON-CHAIN</span>
+                </div>
+                <div class="chain-grid">
+                    <div class="chain-item">
+                        <div class="chain-icon identity-icon">🆔</div>
+                        <div class="chain-info">
+                            <span class="chain-label">Identity</span>
+                            <span class="chain-value" id="agent-id">Agent #1</span>
+                        </div>
+                        <span class="chain-status status-active">Registered</span>
+                    </div>
+                    <div class="chain-item">
+                        <div class="chain-icon reputation-icon">⭐</div>
+                        <div class="chain-info">
+                            <span class="chain-label">Reputation</span>
+                            <span class="chain-value" id="reputation-score">—</span>
+                        </div>
+                        <span class="chain-status status-pending">Building</span>
+                    </div>
+                    <div class="chain-item">
+                        <div class="chain-icon validation-icon">✅</div>
+                        <div class="chain-info">
+                            <span class="chain-label">Validation Artifacts</span>
+                            <span class="chain-value" id="artifact-count">0</span>
+                        </div>
+                        <span class="chain-status status-active">Active</span>
+                    </div>
+                    <div class="chain-item">
+                        <div class="chain-icon wallet-icon">👛</div>
+                        <div class="chain-info">
+                            <span class="chain-label">Wallet</span>
+                            <span class="chain-value mono" id="wallet-addr">0x0f38…6c0A</span>
+                        </div>
+                        <span class="chain-status status-active">Connected</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Risk Guardrails Card -->
+            <section class="card card-risk">
+                <div class="card-header">
+                    <h2>Risk Guardrails</h2>
+                </div>
+                <div class="guardrails-grid">
+                    <div class="guardrail">
+                        <div class="guardrail-header">
+                            <span>Max Position</span>
+                            <span class="guardrail-value">5%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill guardrail-ok" style="width: 0%"></div></div>
+                    </div>
+                    <div class="guardrail">
+                        <div class="guardrail-header">
+                            <span>Max Drawdown</span>
+                            <span class="guardrail-value" id="dd-guardrail">0.0% / 10%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill guardrail-ok" id="dd-bar" style="width: 0%"></div></div>
+                    </div>
+                    <div class="guardrail">
+                        <div class="guardrail-header">
+                            <span>Daily Loss Limit</span>
+                            <span class="guardrail-value" id="daily-guardrail">0.0% / 3%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill guardrail-ok" id="daily-bar" style="width: 0%"></div></div>
+                    </div>
+                    <div class="guardrail">
+                        <div class="guardrail-header">
+                            <span>Open Positions</span>
+                            <span class="guardrail-value" id="positions-guardrail">0 / 5</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill guardrail-ok" id="positions-bar" style="width: 0%"></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trade History Card -->
+            <section class="card card-trades">
+                <div class="card-header">
+                    <h2>Trade History</h2>
+                    <span class="trade-stats" id="trade-stats">0 trades</span>
+                </div>
+                <div class="trades-table" id="trades-table">
+                    <div class="trade-empty">
+                        <span class="trade-empty-icon">📊</span>
+                        <p>No trades executed yet. Agent is analyzing markets...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <span>Sentinel v0.1.0 · ERC-8004 Trustless Agent · AI Trading Agents Hackathon 2026</span>
+            <span id="last-update">Last update: —</span>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

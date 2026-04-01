@@ -30,26 +30,26 @@ All trading decisions are verified on-chain through the **ERC-8004** standard, e
 
 ## Key Features
 
-### 🧠 Regime-Adaptive Strategy
+### Regime-Adaptive Strategy
 - **ADX + EMA crossover** regime detection (trending vs sideways)
 - **Momentum strategy**: MACD crossovers with trend confirmation
 - **Mean reversion strategy**: Bollinger Bands + RSI for overbought/oversold
 - Smooth regime transitions with confirmation periods
 
-### 🛡️ Risk Management
+### Risk Management
 - Position sizing: max 5% of equity per trade
 - Per-trade stop-loss (ATR-based)
 - Max drawdown limit: 10% → automatic halt
 - Daily loss limit: 3%
 - Anti-whipsaw trade interval enforcement
 
-### ⛓️ ERC-8004 Trustless Identity
+### ERC-8004 Trustless Identity
 - On-chain agent identity (ERC-721 NFT on Base)
 - Reputation registry: verifiable trade history
 - Validation artifacts: signed proofs of trade decisions
 - Full compliance reports for transparency
 
-### 📊 Live Dashboard
+### Live Dashboard
 - Real-time P&L tracking
 - Regime and strategy visualization
 - Risk metrics monitoring

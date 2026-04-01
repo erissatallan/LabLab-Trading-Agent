@@ -1,6 +1,6 @@
 # Sentinel — Trustless Regime-Adaptive Trading Agent
 
-> **AI Trading Agents Hackathon** (Mar 30 – Apr 12, 2026) | ERC-8004 Track
+> **LabLab AI Trading Agents Hackathon** ERC-8004 Track
 
 ## What is Sentinel?
 
@@ -11,22 +11,21 @@ All trading decisions are verified on-chain through the **ERC-8004** standard, e
 ## Architecture
 
 ```
-┌────────────────────────────────────────────────────┐
-│                 Sentinel Agent                      │
-├──────────────┬──────────────┬──────────────────────┤
-│   Strategy   │     Risk     │     ERC-8004         │
-│   Engine     │   Manager    │   Integration        │
-│              │              │                       │
-│ • Regime     │ • Position   │ • Identity NFT       │
-│   Detection  │   Sizing     │ • Reputation Log     │
-│ • Momentum   │ • Stop-Loss  │ • Validation         │
-│   (MACD)     │ • Drawdown   │   Artifacts          │
-│ • Mean Rev.  │ • Daily Cap  │ • Compliance         │
-│   (BB + RSI) │ • Kill Sw.   │   Reports            │
-├──────────────┴──────────────┴──────────────────────┤
-│                  Data Layer                         │
-│  Kraken CLI (MCP) │ yfinance │ Aerodrome │ PRISM   │
-└────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                       Sentinel Agent                        │
+├───────────────────┬──────────────┬──────────────────────────┤
+│ Strategy Engine   │ Risk Manager │     ERC-8004 Integration │
+│                   │              │                          │
+│ • Regime          │ • Position   │ • Identity NFT           │
+│   Detection       │   Sizing     │ • Reputation Log         │
+│ • Momentum        │ • Stop-Loss  │ • Validation Artifacts   │
+│   (MACD)          │ • Drawdown   │ • Compliance Reports     │
+│ • Mean Rev.       │ • Daily Cap  │                          │
+│   (BB + RSI)      │ • Kill Sw.   │                          │
+├────────────────── ┴──────────────┴──────────────────────────┤
+│                          Data Layer                         │
+│  Kraken CLI (MCP) │   yfinance   │ Aerodrome │ PRISM        │
+└─────────────────────────────────────────────────────────────┘
 ```
 
 ## Key Features

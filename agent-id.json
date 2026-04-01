@@ -1,0 +1,8 @@
+{
+  "agentId": 1,
+  "agentRegistryAddress": "0xd24FbC9946423597A97Eab271bcF6A4037EE0EE8",
+  "operatorWallet": "0x0f38EC46e5eb7A57cF5371cb259546DE0F896c0A",
+  "agentWallet": "0x0f38EC46e5eb7A57cF5371cb259546DE0F896c0A",
+  "registeredAt": "2026-04-01T12:25:01Z",
+  "network": "base-sepolia"
+}

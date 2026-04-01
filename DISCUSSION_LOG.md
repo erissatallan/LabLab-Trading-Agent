@@ -103,3 +103,91 @@ A DeFi trading agent that:
 ---
 
 *Next session: Project scaffolding and initial implementation.*
+
+---
+
+## Session 2: Core Build (Mar 31, 2026 09:09 EAT)
+
+### Open Questions Resolved
+- ✅ **Wallet**: Base-compatible via MetaMask — `0x0f38EC46e5eb7A57cF5371cb259546DE0F896c0A`
+- ✅ **Kraken CLI**: Installed at `~/.cargo/bin/kraken` — verified live (status "online", BTC ticker ~$67,450)
+- ✅ **Python**: Confirmed, venv set up with all dependencies
+- ✅ **PRISM API key**: Configured in `.env`
+- ✅ **Twitter**: Yes, will build in public for Social Engagement Score
+
+### Implementation Completed
+
+**Strategy Engine** (all tested, live-verified):
+- `indicators.py` — RSI, MACD, Bollinger Bands, ADX, ATR, VWAP, volatility
+- `regime.py` — ADX/EMA regime detection (trending up/down, sideways)
+- `momentum.py` — MACD crossover strategy with ATR-based stops
+- `mean_reversion.py` — Bollinger + RSI with squeeze detection
+- `ensemble.py` — regime-adaptive switcher with audit trail
+
+**Risk Management** (`risk/manager.py`):
+- Position sizing: 5% max per trade
+- Stop-loss: ATR-based (per-strategy)
+- Max drawdown: 10% → trading halt
+- Daily loss limit: 3% → day halt
+- Anti-whipsaw: 60s min between trades
+- Compliance report generator for ERC-8004
+
+**Market Data** (`data/market.py`):
+- Auto-detects Kraken CLI in `~/.cargo/bin/`
+- Falls back to yfinance for backtesting
+- PRISM API integration for canonical asset resolution
+
+**ERC-8004 On-Chain Integration**:
+- `contracts/SentinelAgent.sol` — interacts with Identity/Reputation/Validation registries
+- `agent/chain/identity.py` — Agent Card metadata, artifact hashing, registration
+- Simulation mode operational; live chain mode ready for Base Sepolia deployment
+- Each iteration submits risk_check artifact; trades submit trade_intent artifacts
+
+**Main Agent** (`agent/main.py`):
+- Full orchestration: data → strategy → risk → ERC-8004 → output
+- CLI with `--once`, `--source`, `--symbols`, `--capital` flags
+- Shutdown generates compliance report + audit trail JSON
+
+**Dashboard** (`dashboard/`):
+- Premium dark UI (HTML/CSS/JS)
+- Equity chart, regime indicator, live signals, risk guardrails
+- ERC-8004 status panel with wallet, identity, reputation, artifacts
+- Responsive layout
+
+### Live Test Results (Kraken CLI data source)
+```
+ERC-8004: Agent registered (simulated) ID=1
+Kraken CLI: available (bin=~/.cargo/bin/kraken)
+BTCUSD: sideways (ADX=15.9, conf=0.60) → mean_reversion → HOLD @ $67,383
+ETHUSD: sideways (ADX=15.3, conf=0.64) → mean_reversion → HOLD @ $2,056
+Risk: $10,000 equity, 0.0% drawdown, status=normal
+ERC-8004: 1 risk_check artifact submitted (hash=0x331249ff...)
+```
+
+### Infrastructure
+- Git repo initialized (`main` branch, first commit)
+- `.env` with secrets (gitignored)
+- `.gitignore` configured
+
+### Next Steps
+- [ ] Backtesting framework with historical data
+- [ ] Deploy Solidity contracts to Base Sepolia testnet
+- [ ] Connect dashboard to live agent via WebSocket/SSE
+- [ ] Register on lablab.ai and early.surge.xyz
+- [ ] First Twitter post (#BuildInPublic)
+- [ ] Video demo for submission
+
+### Twitter Post Draft
+> 🤖 Day 1 building "Sentinel" for the @lababorai AI Trading Agents hackathon
+> 
+> A regime-adaptive trading agent that detects whether markets are trending or ranging and switches strategies accordingly. All decisions verified on-chain via ERC-8004.
+> 
+> Kraken CLI → ADX regime detection → MACD/Bollinger ensemble → risk guardrails → on-chain validation artifacts
+> 
+> Built: strategy engine, risk manager, Solidity contracts, live dashboard
+> 
+> Solo builder, 12 days to go 🏗️ #AI #DeFi #ERC8004 #BuildInPublic
+
+---
+
+*Next session: Backtesting + Base testnet deployment.*

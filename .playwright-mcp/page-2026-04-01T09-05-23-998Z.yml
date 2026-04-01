@@ -1,0 +1,1227 @@
+- generic [ref=e1]:
+  - region "We value your privacy" [ref=e2]:
+    - generic [ref=e4]:
+      - heading "We value your privacy" [level=2] [ref=e5]
+      - generic [ref=e6]:
+        - paragraph [ref=e8]:
+          - text: We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+          - link "Privacy Policy" [ref=e9] [cursor=pointer]:
+            - /url: https://lablab.ai/privacy-policy
+        - generic [ref=e10]:
+          - button "Customize" [ref=e11] [cursor=pointer]
+          - button "Reject All" [ref=e12] [cursor=pointer]
+          - button "Accept All" [ref=e13] [cursor=pointer]
+  - alert [ref=e14]
+  - generic [ref=e15]:
+    - navigation "Main navigation" [ref=e16]:
+      - link "Go to homepage" [ref=e18] [cursor=pointer]:
+        - /url: /
+        - img "lablab.ai logo - Community innovating and building with artificial intelligence" [ref=e19]
+      - navigation "Desktop navigation" [ref=e20]:
+        - generic [ref=e23]:
+          - generic:
+            - img
+          - textbox "Search lablab.ai" [ref=e24] [cursor=pointer]
+        - generic [ref=e25]:
+          - link "AI Hackathons" [ref=e26] [cursor=pointer]:
+            - /url: /ai-hackathons
+          - link "AI Apps" [ref=e27] [cursor=pointer]:
+            - /url: /apps
+          - link "AI Tech" [ref=e28] [cursor=pointer]:
+            - /url: /tech
+          - link "AI Tutorials" [ref=e29] [cursor=pointer]:
+            - /url: /ai-tutorials
+          - link "AI Articles" [ref=e30] [cursor=pointer]:
+            - /url: /ai-articles
+          - link "Surge" [ref=e31] [cursor=pointer]:
+            - /url: https://surge.lablab.ai/
+          - link "Sponsor" [ref=e32] [cursor=pointer]:
+            - /url: /sponsor
+          - button [ref=e34] [cursor=pointer]:
+            - img [ref=e35]
+    - generic [ref=e38]:
+      - navigation "Breadcrumb" [ref=e40]:
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - link "Home" [ref=e44] [cursor=pointer]:
+              - /url: https://lablab.ai
+              - img [ref=e45]
+              - generic [ref=e47]: Home
+          - listitem [ref=e48]:
+            - generic [ref=e49]:
+              - img [ref=e50]
+              - link "Tutorials" [ref=e52] [cursor=pointer]:
+                - /url: /ai-tutorials
+          - listitem [ref=e53]:
+            - generic [ref=e54]:
+              - img [ref=e55]
+              - 'link "Building AI Trading Agents with On-Chain Identity: A Complete Guide"':
+                - /url: https://lablab.ai/ai-tutorials/building-ai-trading-agents-with-on-chain-identity
+      - article [ref=e58]:
+        - generic [ref=e59]:
+          - 'heading "Building AI Trading Agents with On-Chain Identity: A Complete Guide" [level=1] [ref=e60]'
+          - generic [ref=e61]:
+            - text: Saturday, March 28, 2026 by
+            - link "kimoisteve" [ref=e62] [cursor=pointer]:
+              - /url: /u/@kimoisteve
+        - generic [ref=e64]:
+          - link "Share" [ref=e65] [cursor=pointer]:
+            - /url: https://lablab.ai/ai-tutorials/building-ai-trading-agents-with-on-chain-identity
+            - button "Share" [ref=e66]:
+              - img [ref=e67]
+              - generic [ref=e69]: Share
+          - link "Share" [ref=e70] [cursor=pointer]:
+            - /url: https://lablab.ai/ai-tutorials/building-ai-trading-agents-with-on-chain-identity
+            - button "Share" [ref=e71]:
+              - img [ref=e72]
+              - generic [ref=e74]: Share
+          - button "Copy" [ref=e75] [cursor=pointer]:
+            - img [ref=e76]
+            - generic [ref=e78]: Copy
+        - link "Edit on Github" [ref=e80] [cursor=pointer]:
+          - /url: https://github.com/lablab-ai/community-content/tree/main/tutorials/en/building-ai-trading-agents-with-on-chain-identity.mdx
+        - generic [ref=e81]:
+          - 'img "Building AI Trading Agents with On-Chain Identity: A Complete Guide" [ref=e83]'
+          - 'heading "Part 1: What Is ERC-8004 and Why Does It Matter?" [level=2] [ref=e84]'
+          - 'heading "The problem: your AI agent is a ghost" [level=2] [ref=e85]'
+          - paragraph [ref=e86]: You build a trading bot. It runs, it trades, it makes decisions. But from the blockchain's perspective, it doesn't exist. There's just a wallet address, no identity, no record of what the agent is, who operates it, or what it's supposed to do.
+          - paragraph [ref=e87]: "This creates real problems:"
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - strong [ref=e90]: No accountability
+              - text: ": anyone can claim any wallet address is their \"AI agent\""
+            - listitem [ref=e91]:
+              - strong [ref=e92]: No discoverability
+              - text: ": other contracts can't verify they're talking to an authorized agent"
+            - listitem [ref=e93]:
+              - strong [ref=e94]: No reputation
+              - text: ": the agent builds no on-chain history that others can trust"
+          - paragraph [ref=e95]: ERC-8004 solves this.
+          - separator [ref=e96]
+          - heading "What ERC-8004 is" [level=2] [ref=e97]
+          - paragraph [ref=e98]:
+            - text: ERC-8004 is a standard for
+            - strong [ref=e99]: AI Agent Identity Registry
+            - text: on Ethereum. It defines a registry contract where agents can be registered with structured metadata, and every registration produces a unique, verifiable
+            - code [ref=e100]: "`agentId`"
+            - text: .
+          - paragraph [ref=e101]: Think of it like ENS (Ethereum Name Service), but for AI agents instead of human-readable names.
+          - heading "What gets stored on-chain" [level=3] [ref=e102]
+          - paragraph [ref=e103]:
+            - text: From
+            - 'link "`contracts/AgentRegistry.sol` L33–L41" [ref=e104] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/contracts/AgentRegistry.sol#L33-L41
+              - code [ref=e105]: "`contracts/AgentRegistry.sol`"
+              - text: L33–L41
+            - text: ":"
+          - code [ref=e107]: "struct AgentRegistration { address operatorWallet; // Owns the ERC-721 token, pays gas address agentWallet; // Hot wallet the agent uses for signing string name; string description; string[] capabilities; // e.g. [\"trading\", \"analysis\", \"eip712-signing\"] uint256 registeredAt; bool active; }"
+          - 'heading "What you get back: `agentId`" [level=3] [ref=e108]':
+            - text: "What you get back:"
+            - code [ref=e109]: "`agentId`"
+          - paragraph [ref=e110]:
+            - text: When you call
+            - code [ref=e111]: "`register()`"
+            - text: ", the contract mints an ERC-721 token and returns its ID:"
+          - code [ref=e113]: agentId = _nextAgentId++; // auto-incrementing uint256 _mint(msg.sender, agentId); // ERC-721 mint — you own this token
+          - paragraph [ref=e114]:
+            - text: This
+            - code [ref=e115]: "`agentId`"
+            - text: (the ERC-721 token ID) becomes the agent's
+            - strong [ref=e116]: persistent on-chain identity
+            - text: "— used for:"
+          - list [ref=e117]:
+            - listitem [ref=e118]: Capital allocation in the agent Vault
+            - listitem [ref=e119]: Risk validation in the Risk Router
+            - listitem [ref=e120]: Cryptographic signing in EIP-712 checkpoints
+          - separator [ref=e121]
+          - heading "Prerequisites" [level=2] [ref=e122]
+          - list [ref=e123]:
+            - listitem [ref=e124]: Node.js 20+ installed
+            - listitem [ref=e125]:
+              - text: Sepolia ETH (get from
+              - link "sepoliafaucet.com" [ref=e126] [cursor=pointer]:
+                - /url: https://sepoliafaucet.com
+              - text: )
+            - listitem [ref=e127]: Infura or Alchemy Sepolia RPC URL
+            - listitem [ref=e128]: Kraken CLI installed (see Part 3)
+          - separator [ref=e129]
+          - 'heading "Step 1: Clone the repo and install dependencies" [level=2] [ref=e130]'
+          - code [ref=e132]: git clone https://github.com/Stephen-Kimoi/ai-trading-agent-template cd ai-trading-agent-template npm install
+          - separator [ref=e133]
+          - 'heading "Step 2: Configure your environment" [level=2] [ref=e134]'
+          - code [ref=e136]: cp .env.example .env
+          - paragraph [ref=e137]: "Fill in at minimum:"
+          - code [ref=e139]: "SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_KEY PRIVATE_KEY=0xYOUR_OPERATOR_WALLET_PRIVATE_KEY # Optional: separate hot wallet for signing. Defaults to PRIVATE_KEY. AGENT_WALLET_PRIVATE_KEY=0xYOUR_HOT_WALLET_KEY"
+          - paragraph [ref=e140]:
+            - strong [ref=e141]: "Two wallet roles:"
+          - table [ref=e142]:
+            - rowgroup [ref=e143]:
+              - row "Wallet Role Recommended" [ref=e144]:
+                - columnheader "Wallet" [ref=e145]
+                - columnheader "Role" [ref=e146]
+                - columnheader "Recommended" [ref=e147]
+            - rowgroup [ref=e148]:
+              - 'row "`PRIVATE_KEY` (operatorWallet) Owns the ERC-721 token, pays gas Cold wallet / hardware wallet" [ref=e149]':
+                - 'cell "`PRIVATE_KEY` (operatorWallet)" [ref=e150]':
+                  - code [ref=e151]: "`PRIVATE_KEY`"
+                  - text: (operatorWallet)
+                - cell "Owns the ERC-721 token, pays gas" [ref=e152]:
+                  - text: Owns the
+                  - link "ERC-721" [ref=e153] [cursor=pointer]:
+                    - /url: https://eips.ethereum.org/EIPS/eip-721
+                  - text: token, pays gas
+                - cell "Cold wallet / hardware wallet" [ref=e154]
+              - 'row "`AGENT_WALLET_PRIVATE_KEY` (agentWallet) Signs TradeIntents + checkpoints at runtime Separate hot wallet" [ref=e155]':
+                - 'cell "`AGENT_WALLET_PRIVATE_KEY` (agentWallet)" [ref=e156]':
+                  - code [ref=e157]: "`AGENT_WALLET_PRIVATE_KEY`"
+                  - text: (agentWallet)
+                - cell "Signs TradeIntents + checkpoints at runtime" [ref=e158]
+                - cell "Separate hot wallet" [ref=e159]
+          - paragraph [ref=e160]: For testing, the same key for both is fine.
+          - separator [ref=e161]
+          - 'heading "Step 3: Deploy the five contracts" [level=2] [ref=e162]'
+          - code [ref=e164]: npx hardhat run scripts/deploy.ts --network sepolia
+          - paragraph [ref=e165]: "Output:"
+          - code [ref=e167]: "1/5 Deploying AgentRegistry (ERC-721)... AgentRegistry: 0xABC... 2/5 Deploying HackathonVault... HackathonVault: 0xDEF... 3/5 Deploying RiskRouter... RiskRouter: 0xGHI... 4/5 Deploying ReputationRegistry... ReputationRegistry: 0xJKL... 5/5 Deploying ValidationRegistry... ValidationRegistry: 0xMNO... ── Add these to your .env ────────────────────────────────────────── AGENT_REGISTRY_ADDRESS=0xABC... HACKATHON_VAULT_ADDRESS=0xDEF... RISK_ROUTER_ADDRESS=0xGHI... REPUTATION_REGISTRY_ADDRESS=0xJKL... VALIDATION_REGISTRY_ADDRESS=0xMNO... ────────────────────────────────────────────────────────────────────"
+          - paragraph [ref=e168]:
+            - text: Copy all five addresses to your
+            - code [ref=e169]: "`.env`"
+            - text: .
+          - blockquote [ref=e170]:
+            - paragraph [ref=e171]:
+              - strong [ref=e172]: "Note:"
+              - text: If you're integrating with an existing deployment (e.g. a shared registry or vault someone else deployed), use those contract addresses instead and skip this step. Deploying your own contracts is recommended for local development and testing.
+          - separator [ref=e173]
+          - 'heading "Step 4: Register your agent" [level=2] [ref=e174]'
+          - code [ref=e176]: npm run register
+          - paragraph [ref=e177]: "Output:"
+          - code [ref=e179]: "Operator wallet: 0xYourOperatorAddress Agent wallet: 0xYourAgentWalletAddress AgentRegistry: 0xABC... [identity] Registering new agent on-chain (ERC-721 mint)... [identity] Registration tx: 0xTXHASH... [identity] Agent registered! Token ID (agentId): 0 [identity] Add to .env: AGENT_ID=0 [identity] Saved to agent-id.json Agent registered! agentId (ERC-721 token ID): 0 Add to .env: AGENT_ID=0 Setting default risk params on RiskRouter... Risk params set: maxPosition=$500, maxDrawdown=5%, maxTrades/hr=10"
+          - paragraph [ref=e180]:
+            - text: Add
+            - code [ref=e181]: "`AGENT_ID=0`"
+            - text: (or whatever token ID you received) to your
+            - code [ref=e182]: "`.env`"
+            - text: .
+          - separator [ref=e183]
+          - 'heading "Step 5: Verify on Etherscan" [level=2] [ref=e184]'
+          - paragraph [ref=e185]:
+            - text: Open
+            - link "Sepolia Etherscan" [ref=e186] [cursor=pointer]:
+              - /url: https://sepolia.etherscan.io
+            - text: → your
+            - code [ref=e187]: "`AGENT_REGISTRY_ADDRESS`"
+            - text: →
+            - strong [ref=e188]: Events
+            - text: "tab:"
+          - code [ref=e190]: "AgentRegistered agentId (token ID): 0 operatorWallet: 0xYourOperatorAddress agentWallet: 0xYourAgentWalletAddress name: AITradingAgent"
+          - paragraph [ref=e191]:
+            - text: You can also check the
+            - strong [ref=e192]:
+              - link "ERC-721 Transfers" [ref=e193] [cursor=pointer]:
+                - /url: https://sepolia.etherscan.io
+            - text: tab, you'll see the mint event transferring token ID
+            - code [ref=e194]: "`0`"
+            - text: from the zero address to your wallet.
+          - separator [ref=e195]
+          - heading "Why on-chain agent identity matters" [level=2] [ref=e196]
+          - heading "1. The identity layer is already built" [level=3] [ref=e197]
+          - paragraph [ref=e198]: By using ERC-8004, every team's agent automatically gets a verifiable identity without having to invent their own scheme. The registry is the shared ground truth.
+          - heading "2. Reputation becomes composable" [level=3] [ref=e199]
+          - paragraph [ref=e200]:
+            - text: Because
+            - code [ref=e201]: "`agentId`"
+            - text: is persistent and tied to on-chain activity, every trade, every checkpoint, every vault interaction is linked to that identity. Future systems could build reputation scores, whitelists, or risk tiers on top of this.
+          - heading "3. The scaffolding stays the same" [level=3] [ref=e202]
+          - paragraph [ref=e203]: "This is the \"reusable template\" angle: the identity, reputation system, and validation scaffolding (ERC-8004 → Vault → RiskRouter → EIP-712) stay constant across teams. What changes is the strategy inside. Your agent's identity doesn't care if you're running a momentum strategy, an LLM, or a neural network."
+          - separator [ref=e204]
+          - heading "The AgentRegistry contract" [level=2] [ref=e205]
+          - paragraph [ref=e206]:
+            - text: Here's the core registration function (
+            - 'link "`contracts/AgentRegistry.sol` L92–L120" [ref=e207] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/contracts/AgentRegistry.sol#L92-L120
+              - code [ref=e208]: "`contracts/AgentRegistry.sol`"
+              - text: L92–L120
+            - text: "):"
+          - code [ref=e210]: "function register( address agentWallet, string calldata name, string calldata description, string[] calldata capabilities, string calldata agentURI ) external returns (uint256 agentId) { require(bytes(name).length > 0, \"AgentRegistry: name required\"); require(agentWallet != address(0), \"AgentRegistry: invalid agentWallet\"); agentId = _nextAgentId++; _mint(msg.sender, agentId); // ERC-721 mint _setTokenURI(agentId, agentURI); agents[agentId] = AgentRegistration({ operatorWallet: msg.sender, agentWallet: agentWallet, name: name, description: description, capabilities: capabilities, registeredAt: block.timestamp, active: true }); walletToAgentId[agentWallet] = agentId; emit AgentRegistered(agentId, msg.sender, agentWallet, name); }"
+          - paragraph [ref=e211]: "Key properties:"
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - strong [ref=e214]: Mints an ERC-721 token
+              - text: ": your agent identity is a transferable NFT"
+            - listitem [ref=e215]:
+              - strong [ref=e216]: Two wallet roles
+              - text: ":"
+              - code [ref=e217]: "`operatorWallet`"
+              - text: (owns the token) and
+              - code [ref=e218]: "`agentWallet`"
+              - text: (signs trades at runtime)
+            - listitem [ref=e219]:
+              - strong [ref=e220]: Auto-incrementing agentId
+              - text: ": starts at 0, stable and unique forever"
+            - listitem [ref=e221]:
+              - strong [ref=e222]: Emits an event
+              - text: ":"
+              - code [ref=e223]: "`AgentRegistered(agentId, operatorWallet, agentWallet, name)`"
+              - text: — queryable on Etherscan
+          - separator [ref=e224]
+          - 'heading "Part 2: Registering Your Agent On-Chain (ERC-721)" [level=2] [ref=e225]'
+          - heading "Why ERC-721?" [level=2] [ref=e226]
+          - paragraph [ref=e227]: "Your agent's identity is an NFT. This means:"
+          - list [ref=e228]:
+            - listitem [ref=e229]:
+              - strong [ref=e230]: agentId
+              - text: is a
+              - code [ref=e231]: "`uint256`"
+              - text: token ID, stable, unique, gas-efficient to store
+            - listitem [ref=e232]:
+              - text: The token is
+              - strong [ref=e233]: transferable
+              - text: ": sell a well-performing agent along with its on-chain reputation"
+            - listitem [ref=e234]: Standard ERC-721 interfaces mean wallets, marketplaces, and indexers understand it natively
+            - listitem [ref=e235]: Token URI points to your Agent Registration JSON (metadata about capabilities and endpoints)
+          - separator [ref=e236]
+          - heading "What the registration looks like under the hood" [level=2] [ref=e237]
+          - paragraph [ref=e238]:
+            - 'link "`scripts/register-agent.ts` L47" [ref=e239] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/scripts/register-agent.ts#L47
+              - code [ref=e240]: "`scripts/register-agent.ts`"
+              - text: L47
+            - text: calls
+            - 'link "`src/agent/identity.ts` L46–L68" [ref=e241] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/identity.ts#L46-L68
+              - code [ref=e242]: "`src/agent/identity.ts`"
+              - text: L46–L68
+            - text: ":"
+          - code [ref=e244]: "const agentId = await getAgentId(operatorSigner, registryAddress, { name: \"AITradingAgent\", agentWallet: agentWallet.address, capabilities: [\"trading\", \"analysis\", \"eip712-signing\"], agentURI: \"ipfs://...\", // or data URI ... });"
+          - paragraph [ref=e245]:
+            - text: Which calls
+            - code [ref=e246]: "`register()`"
+            - text: on the contract (
+            - 'link "`contracts/AgentRegistry.sol` L92–L120" [ref=e247] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/contracts/AgentRegistry.sol#L92-L120
+              - code [ref=e248]: "`contracts/AgentRegistry.sol`"
+              - text: L92–L120
+            - text: "):"
+          - code [ref=e250]: "function register( address agentWallet, string calldata name, string calldata description, string[] calldata capabilities, string calldata agentURI ) external returns (uint256 agentId) { agentId = _nextAgentId++; _mint(msg.sender, agentId); // <-- ERC-721 mint _setTokenURI(agentId, agentURI); // ... stores metadata emit AgentRegistered(agentId, msg.sender, agentWallet, name); }"
+          - paragraph [ref=e251]:
+            - text: The token ID is auto-incrementing from 0. Your
+            - code [ref=e252]: "`agentId`"
+            - text: is unique and permanent.
+          - separator [ref=e253]
+          - heading "Template note" [level=2] [ref=e254]
+          - blockquote [ref=e255]:
+            - paragraph [ref=e256]:
+              - strong [ref=e257]: "Why this matters:"
+              - text: Once registered, your
+              - code [ref=e258]: "`agentId`"
+              - text: is the identity anchor for everything your agent does, capital allocation, risk validation, EIP-712 checkpoint signing, and on-chain attestations. This is how agents build verifiable on-chain reputation over time. Swapping your strategy never touches this layer.
+          - separator [ref=e259]
+          - 'heading "Part 3: Connecting to Kraken CLI" [level=2] [ref=e260]'
+          - heading "Why the CLI, not raw REST?" [level=2] [ref=e261]
+          - paragraph [ref=e262]: "When building an AI trading agent, you want your code to stay focused on strategy and decision-making: not exchange plumbing. The Kraken CLI handles all of that automatically:"
+          - list [ref=e263]:
+            - listitem [ref=e264]: Cryptographic nonce management (no clock drift issues)
+            - listitem [ref=e265]: HMAC-SHA512 request signing (no manual auth code)
+            - listitem [ref=e266]: Rate-limit retries (no 429 handling needed)
+            - listitem [ref=e267]:
+              - text: Built-in paper trading sandbox (
+              - code [ref=e268]: "`--sandbox`"
+              - text: flag)
+            - listitem [ref=e269]:
+              - strong [ref=e270]: Built-in MCP server
+              - text: ": exposes Kraken as structured tools for AI agents"
+          - separator [ref=e271]
+          - heading "Installing the Kraken CLI" [level=2] [ref=e272]
+          - code [ref=e274]: "# install script (Linux/macOS) curl --proto '=https' --tlsv1.2 -LsSf https://github.com/krakenfx/kraken-cli/releases/latest/download/kraken-cli-installer.sh | sh # check out the version kraken --version"
+          - paragraph [ref=e275]:
+            - text: Add to your
+            - code [ref=e276]: "`.env`"
+            - text: ":"
+          - code [ref=e278]: "KRAKEN_API_KEY=your_api_key KRAKEN_API_SECRET=your_api_secret KRAKEN_SANDBOX=true # start with sandbox! KRAKEN_CLI_PATH=kraken # only needed if binary isn't on PATH"
+          - separator [ref=e279]
+          - heading "Getting Kraken API keys" [level=2] [ref=e280]
+          - list [ref=e281]:
+            - listitem [ref=e282]:
+              - text: Log into
+              - link "kraken.com" [ref=e283] [cursor=pointer]:
+                - /url: https://kraken.com
+              - text: → choose
+              - strong [ref=e284]: Kraken Pro
+              - text: (Advanced trading)
+            - listitem [ref=e285]:
+              - text: Go to
+              - strong [ref=e286]: Settings → API
+              - text: and create a new key
+            - listitem [ref=e287]: "Tick exactly these permissions:"
+          - paragraph [ref=e288]:
+            - strong [ref=e289]: Funds permissions
+          - list [ref=e290]:
+            - listitem [ref=e291]:
+              - text: ✅ Query — required for
+              - code [ref=e292]: "`getBalance()`"
+          - paragraph [ref=e293]:
+            - strong [ref=e294]: Orders and trades
+          - list [ref=e295]:
+            - listitem [ref=e296]:
+              - text: ✅ Query open orders & trades — required for
+              - code [ref=e297]: "`getOpenOrders()`"
+            - listitem [ref=e298]:
+              - text: ✅ Create & modify orders — required for
+              - code [ref=e299]: "`placeOrder()`"
+            - listitem [ref=e300]: ✅ Cancel & close orders — required if the agent needs to cancel orders
+          - paragraph [ref=e301]: Leave everything else unchecked (no Deposit, Withdraw, Earn, Data, or WebSocket).
+          - list [ref=e302]:
+            - listitem [ref=e303]:
+              - text: Copy the key + secret into
+              - code [ref=e304]: "`.env`"
+          - separator [ref=e305]
+          - heading "Using the CLI directly" [level=2] [ref=e306]
+          - paragraph [ref=e307]: "The CLI is useful to verify your setup before running the agent:"
+          - code [ref=e309]: "# Check ticker (no auth needed) kraken --json ticker --pair XBTUSD # Check balance (requires API key) kraken --json --api-key $KRAKEN_API_KEY --api-secret $KRAKEN_API_SECRET balance # Paper trade (sandbox mode) kraken --sandbox --json --api-key $KRAKEN_API_KEY --api-secret $KRAKEN_API_SECRET \\ order add --pair XBTUSD --type buy --ordertype market --volume 0.001"
+          - separator [ref=e310]
+          - heading "How the TypeScript client wraps the CLI" [level=2] [ref=e311]
+          - paragraph [ref=e312]:
+            - 'link "`src/exchange/kraken.ts` L64–L87" [ref=e313] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/exchange/kraken.ts#L64-L87
+              - code [ref=e314]: "`src/exchange/kraken.ts`"
+              - text: L64–L87
+            - text: "spawns the CLI as a subprocess:"
+          - code [ref=e316]: "private async run(subcommand: string[], isPrivate = false): Promise<unknown> { const args: string[] = []; if (isPrivate && !this.sandbox) { args.push(\"--api-key\", this.apiKey, \"--api-secret\", this.apiSecret); } args.push(...subcommand); args.push(\"-o\", \"json\"); const { stdout } = await execFileAsync(KRAKEN_BIN, args, { timeout: 15000 }); return JSON.parse(stdout.trim()); }"
+          - paragraph [ref=e317]: "All three public methods use this:"
+          - code [ref=e319]: "// Fetch market data const market = await kraken.getTicker(\"XBTUSD\"); // → { price: 95420.5, bid: 95418, ask: 95423, volume: 1204, ... } // Place order (paper trade in sandbox) const result = await kraken.placeOrder({ pair: \"XBTUSD\", type: \"buy\", ordertype: \"market\", volume: \"0.001\" }); // → { txid: [\"OTXID-...\"], descr: { order: \"buy 0.001 XBTUSD @ market\" } }"
+          - separator [ref=e320]
+          - heading "MCP server mode (alternative)" [level=2] [ref=e321]
+          - paragraph [ref=e322]: "The CLI ships with a built-in MCP server, the preferred integration for agents that already use the Model Context Protocol:"
+          - code [ref=e324]: "# Start the MCP server kraken mcp serve --port 8080"
+          - paragraph [ref=e325]:
+            - text: Then use
+            - code [ref=e326]: "`KrakenMCPClient`"
+            - text: in
+            - 'link "`src/exchange/kraken.ts`" [ref=e327] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/exchange/kraken.ts
+              - code [ref=e328]: "`src/exchange/kraken.ts`"
+            - text: ":"
+          - code [ref=e330]: "import { KrakenMCPClient } from \"./src/exchange/kraken.js\"; const kraken = new KrakenMCPClient(8080); // Same interface as KrakenClient const market = await kraken.getTicker(\"XBTUSD\");"
+          - paragraph [ref=e331]: This is the cleanest approach for LangChain/Claude tool-use integrations, since the MCP server exposes Kraken operations as first-class tools.
+          - separator [ref=e332]
+          - heading "Sandbox vs. live" [level=2] [ref=e333]
+          - table [ref=e334]:
+            - rowgroup [ref=e335]:
+              - row "Setting Behavior" [ref=e336]:
+                - columnheader "Setting" [ref=e337]
+                - columnheader "Behavior" [ref=e338]
+            - rowgroup [ref=e339]:
+              - 'row "`KRAKEN_SANDBOX=true` Paper trading — orders logged but not executed" [ref=e340]':
+                - 'cell "`KRAKEN_SANDBOX=true`" [ref=e341]':
+                  - code [ref=e342]: "`KRAKEN_SANDBOX=true`"
+                - cell "Paper trading — orders logged but not executed" [ref=e343]
+              - 'row "`KRAKEN_SANDBOX=false` Live trading — real funds, real orders" [ref=e344]':
+                - 'cell "`KRAKEN_SANDBOX=false`" [ref=e345]':
+                  - code [ref=e346]: "`KRAKEN_SANDBOX=false`"
+                - cell "Live trading — real funds, real orders" [ref=e347]
+          - paragraph [ref=e348]: The agent reads this at startup. No code changes needed to switch modes.
+          - separator [ref=e349]
+          - heading "Template note" [level=2] [ref=e350]
+          - blockquote [ref=e351]:
+            - paragraph [ref=e352]:
+              - strong [ref=e353]: "Template note:"
+              - text: The
+              - code [ref=e354]: "`KrakenClient`"
+              - text: is the exchange adapter layer. Your strategy returns a
+              - code [ref=e355]: "`TradeDecision`"
+              - text: — the agent loop calls
+              - code [ref=e356]: "`placeOrder()`"
+              - text: automatically. You never touch the CLI directly. Swapping Kraken for a different exchange only requires replacing this one file.
+          - separator [ref=e357]
+          - 'heading "Part 4: The Vault, Risk Router, and TradeIntent Pattern" [level=2] [ref=e358]'
+          - heading "The full flow" [level=2] [ref=e359]
+          - code [ref=e361]: "Strategy decision (TradeDecision) ↓ Build TradeIntent struct ↓ Sign with EIP-712 (agentWallet) ↓ RiskRouter.submitTradeIntent(intent, signature) ├── verifies EIP-712 signature → agentWallet in AgentRegistry ├── checks nonce (replay protection) ├── checks deadline ├── validates risk params (position size, trade frequency) ├── emits TradeApproved or TradeRejected on-chain ↓ (if approved) Kraken CLI: placeOrder() ↓ Vault tracks capital"
+          - paragraph [ref=e362]: Every step is on-chain. Every approval and rejection is a permanent event.
+          - separator [ref=e363]
+          - heading "The TradeIntent struct" [level=2] [ref=e364]
+          - paragraph [ref=e365]:
+            - text: Instead of the agent directly calling Kraken, it first constructs a
+            - strong [ref=e366]: signed intent
+            - text: ": a commitment to a specific trade that's been cryptographically authorized ("
+            - 'link "`contracts/RiskRouter.sol` L35–L44" [ref=e367] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/contracts/RiskRouter.sol#L35-L44
+              - code [ref=e368]: "`contracts/RiskRouter.sol`"
+              - text: L35–L44
+            - text: "):"
+          - code [ref=e370]: "struct TradeIntent { uint256 agentId; address agentWallet; // must match AgentRegistry string pair; // e.g. \"XBTUSD\" string action; // \"BUY\" or \"SELL\" uint256 amountUsdScaled; // USD * 100 (e.g. 50000 = $500) uint256 maxSlippageBps; // max acceptable slippage uint256 nonce; // replay protection uint256 deadline; // Unix timestamp }"
+          - paragraph [ref=e371]: The nonce increments with each approved intent, so an old signature can't be replayed.
+          - separator [ref=e372]
+          - heading "Building and signing a TradeIntent (TypeScript)" [level=2] [ref=e373]
+          - paragraph [ref=e374]:
+            - 'link "`src/onchain/riskRouter.ts` L72–L145" [ref=e375] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/onchain/riskRouter.ts#L72-L145
+              - code [ref=e376]: "`src/onchain/riskRouter.ts`"
+              - text: L72–L145
+            - text: "handles this:"
+          - code [ref=e378]: "const riskRouter = new RiskRouterClient(routerAddress, agentWallet, SEPOLIA_CHAIN_ID); // 1. Build intent (fetches current nonce from chain) const intent = await riskRouter.buildIntent( agentId, agentWallet.address, \"XBTUSD\", \"BUY\", 100, // $100 USD { maxSlippageBps: 50, deadlineSeconds: 300 } ); // 2. Sign with EIP-712 (agentWallet is the hot signing key) const signed = await riskRouter.signIntent(intent, agentWallet); // 3. Submit to RiskRouter const result = await riskRouter.submitIntent(signed); if (result.approved) { console.log(\"Trade approved — intentHash:\", result.intentHash); } else { console.warn(\"Trade rejected:\", result.reason); }"
+          - paragraph [ref=e379]:
+            - text: The
+            - code [ref=e380]: "`intentHash`"
+            - text: is carried into the EIP-712 checkpoint, linking the checkpoint to the specific approved intent.
+          - separator [ref=e381]
+          - heading "What the RiskRouter checks" [level=2] [ref=e382]
+          - code [ref=e384]: 1. deadline — is the intent still valid? 2. nonce — does it match the stored nonce (not replayed)? 3. signature — does it recover to the registered agentWallet? 4. position size — is amountUsdScaled ≤ maxPositionSize? 5. trade frequency — are we within maxTradesPerHour?
+          - paragraph [ref=e385]: "Each check emits an event on Sepolia if it fails:"
+          - code [ref=e387]: TradeRejected(agentId, intentHash, "Exceeds maxPositionSize") TradeRejected(agentId, intentHash, "Intent expired")
+          - paragraph [ref=e388]: "If all checks pass:"
+          - code [ref=e390]: TradeApproved(agentId, intentHash, amountUsdScaled)
+          - separator [ref=e391]
+          - heading "Setting your risk params" [level=2] [ref=e392]
+          - paragraph [ref=e393]:
+            - text: "You don't need to do this manually:"
+            - code [ref=e394]: "`npm run register`"
+            - text: already sets default risk params as part of registration (
+            - 'link "`scripts/register-agent.ts` L76–L83" [ref=e395] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/scripts/register-agent.ts#L76-L83
+              - code [ref=e396]: "`scripts/register-agent.ts`"
+              - text: L76–L83
+            - text: "):"
+          - code [ref=e398]: "// Called automatically during npm run register await router.setRiskParams( agentId, BigInt(50000), // maxPositionUsdScaled: $500 max per trade (500 * 100) BigInt(500), // maxDrawdownBps: 5% BigInt(10) // maxTradesPerHour: 10 );"
+          - paragraph [ref=e399]:
+            - text: To change them later, use
+            - 'link "`src/onchain/riskRouter.ts` L183–L196" [ref=e400] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/onchain/riskRouter.ts#L183-L196
+              - code [ref=e401]: "`src/onchain/riskRouter.ts`"
+              - text: L183–L196
+            - text: ":"
+          - code [ref=e403]: "await riskRouter.setRiskParams( agentId, 500, // maxPositionUsd: $500 per trade 500, // maxDrawdownBps: 5% 10 // maxTradesPerHour );"
+          - separator [ref=e404]
+          - heading "Template note" [level=2] [ref=e405]
+          - blockquote [ref=e406]:
+            - paragraph [ref=e407]:
+              - strong [ref=e408]: "Why this matters:"
+              - text: "The TradeIntent pattern gives every trade a cryptographic proof of intent that was validated on-chain before execution. This is what makes agent behavior auditable and trustworthy: anyone can verify that a specific trade was approved by a specific registered agent against a defined risk policy, without having to trust the agent's own logs."
+          - separator [ref=e409]
+          - 'heading "Part 5: Building the Explanation Layer" [level=2] [ref=e410]'
+          - heading "Why explainability matters for trading agents" [level=2] [ref=e411]
+          - paragraph [ref=e412]: "When an agent makes a trade, two questions need answers:"
+          - list [ref=e413]:
+            - listitem [ref=e414]:
+              - strong [ref=e415]: For humans
+              - text: ":"
+              - emphasis [ref=e416]: Why did it do that?
+              - text: ": in plain language, auditable after the fact"
+            - listitem [ref=e417]:
+              - strong [ref=e418]: For machines
+              - text: ":"
+              - emphasis [ref=e419]: Can we verify it said what it claims to say?
+              - text: ": cryptographically"
+          - paragraph [ref=e420]: This tutorial covers the first question. Part 6 covers the second.
+          - separator [ref=e421]
+          - 'heading "The `reasoning` field in every decision" [level=2] [ref=e422]':
+            - text: The
+            - code [ref=e423]: "`reasoning`"
+            - text: field in every decision
+          - paragraph [ref=e424]:
+            - text: Every
+            - code [ref=e425]: "`TradeDecision`"
+            - text: returned by your strategy must include a
+            - code [ref=e426]: "`reasoning`"
+            - text: string (
+            - 'link "`src/types/index.ts` L30–L37" [ref=e427] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/types/index.ts#L30-L37
+              - code [ref=e428]: "`src/types/index.ts`"
+              - text: L30–L37
+            - text: "):"
+          - code [ref=e430]: "interface TradeDecision { action: \"BUY\" | \"SELL\" | \"HOLD\"; asset: string; pair: string; amount: number; confidence: number; reasoning: string; // ← this is required }"
+          - paragraph [ref=e431]:
+            - text: This is what your strategy should return for
+            - code [ref=e432]: "`reasoning`"
+            - text: ":"
+          - code [ref=e434]: "// Good: specific, auditable \"Price fell 1.2% over last 5 ticks while volume dropped 40% below average. Bearish divergence — selling to reduce exposure. Risk: potential support at $94,200 may reverse the move.\" // Bad: too vague \"The market looks bad.\""
+          - paragraph [ref=e435]: "The reasoning field flows through three places automatically, once per tick (every 30 seconds by default):"
+          - table [ref=e436]:
+            - rowgroup [ref=e437]:
+              - row "Where What you see Code reference" [ref=e438]:
+                - columnheader "Where" [ref=e439]
+                - columnheader "What you see" [ref=e440]
+                - columnheader "Code reference" [ref=e441]
+            - rowgroup [ref=e442]:
+              - 'row "Terminal Printed immediately after each decision via `formatExplanation()` `src/agent/index.ts` L119" [ref=e443]':
+                - cell "Terminal" [ref=e444]:
+                  - strong [ref=e445]: Terminal
+                - 'cell "Printed immediately after each decision via `formatExplanation()`" [ref=e446]':
+                  - text: Printed immediately after each decision via
+                  - code [ref=e447]: "`formatExplanation()`"
+                - 'cell "`src/agent/index.ts` L119" [ref=e448]':
+                  - 'link "`src/agent/index.ts` L119" [ref=e449] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L119
+                    - code [ref=e450]: "`src/agent/index.ts`"
+                    - text: L119
+              - 'row "Terminal (checkpoint block) Printed again inside the signed checkpoint summary via `formatCheckpointLog()` `src/agent/index.ts` L174" [ref=e451]':
+                - cell "Terminal (checkpoint block)" [ref=e452]:
+                  - strong [ref=e453]: Terminal (checkpoint block)
+                - 'cell "Printed again inside the signed checkpoint summary via `formatCheckpointLog()`" [ref=e454]':
+                  - text: Printed again inside the signed checkpoint summary via
+                  - code [ref=e455]: "`formatCheckpointLog()`"
+                - 'cell "`src/agent/index.ts` L174" [ref=e456]':
+                  - 'link "`src/agent/index.ts` L174" [ref=e457] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L174
+                    - code [ref=e458]: "`src/agent/index.ts`"
+                    - text: L174
+              - 'row "EIP-712 signature `keccak256(reasoning)` is computed and included in the signed payload `src/explainability/checkpoint.ts` L69" [ref=e459]':
+                - cell "EIP-712 signature" [ref=e460]:
+                  - strong [ref=e461]: EIP-712 signature
+                - 'cell "`keccak256(reasoning)` is computed and included in the signed payload" [ref=e462]':
+                  - code [ref=e463]: "`keccak256(reasoning)`"
+                  - text: is computed and included in the signed payload
+                - 'cell "`src/explainability/checkpoint.ts` L69" [ref=e464]':
+                  - 'link "`src/explainability/checkpoint.ts` L69" [ref=e465] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/checkpoint.ts#L69
+                    - code [ref=e466]: "`src/explainability/checkpoint.ts`"
+                    - text: L69
+              - 'row "`checkpoints.jsonl` Full reasoning string appended as JSON after every tick `src/agent/index.ts` L193" [ref=e467]':
+                - 'cell "`checkpoints.jsonl`" [ref=e468]':
+                  - strong [ref=e469]:
+                    - code [ref=e470]: "`checkpoints.jsonl`"
+                - cell "Full reasoning string appended as JSON after every tick" [ref=e471]
+                - 'cell "`src/agent/index.ts` L193" [ref=e472]':
+                  - 'link "`src/agent/index.ts` L193" [ref=e473] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L193
+                    - code [ref=e474]: "`src/agent/index.ts`"
+                    - text: L193
+              - 'row "Dashboard Shown on each checkpoint card under the action badge `http://localhost:3000` (poll every 5s)" [ref=e475]':
+                - cell "Dashboard" [ref=e476]:
+                  - strong [ref=e477]: Dashboard
+                - cell "Shown on each checkpoint card under the action badge" [ref=e478]
+                - 'cell "`http://localhost:3000` (poll every 5s)" [ref=e479]':
+                  - code [ref=e480]: "`http://localhost:3000`"
+                  - text: (poll every 5s)
+          - paragraph [ref=e481]:
+            - text: You'll see the first output in the terminal
+            - strong [ref=e482]: within 30 seconds
+            - text: of starting
+            - code [ref=e483]: "`npm run run-agent`"
+            - text: (the agent warms up for 5 ticks collecting price samples, then starts making decisions). The default interval is set in
+            - 'link "`src/agent/index.ts` L42" [ref=e484] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L42
+              - code [ref=e485]: "`src/agent/index.ts`"
+              - text: L42
+            - text: and can be overridden with
+            - code [ref=e486]: "`POLL_INTERVAL_MS`"
+            - text: in
+            - code [ref=e487]: "`.env`"
+            - text: .
+          - separator [ref=e488]
+          - 'heading "The `formatExplanation()` function" [level=2] [ref=e489]':
+            - text: The
+            - code [ref=e490]: "`formatExplanation()`"
+            - text: function
+          - paragraph [ref=e491]:
+            - 'link "`src/explainability/reasoner.ts` L19–L51" [ref=e492] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/reasoner.ts#L19-L51
+              - code [ref=e493]: "`src/explainability/reasoner.ts`"
+              - text: L19–L51
+            - text: "wraps the decision + market context into a structured log line:"
+          - code [ref=e495]: "import { formatExplanation } from \"./src/explainability/reasoner.js\"; const explanation = formatExplanation(decision, market); console.log(explanation);"
+          - paragraph [ref=e496]: "Output for a BUY:"
+          - code [ref=e498]: "[2024-01-15T10:30:00.000Z] BUY XBTUSD — $100.00 @ $95,420.50 Confidence: 78% Reason: Upward momentum: price rose 0.62% over last 5 ticks. Spread is tight at 0.003%. Buying. Market context: 24h high=96200, low=93800, VWAP=94980.20 Spread: 0.0052% | Volume: 1204.50"
+          - paragraph [ref=e499]: "Output for a HOLD:"
+          - code [ref=e501]: "[2026-03-27T11:02:50.000Z] HOLD XBTUSD @ $66,422.60 Confidence: 50% Reason: No clear momentum (0.09% change). Holding current position. Market: bid=66421, ask=66421.1, spread=0.0002%, vol=2764.35"
+          - separator [ref=e502]
+          - heading "Swapping in an LLM (optional)" [level=2] [ref=e503]
+          - paragraph [ref=e504]:
+            - text: The demo runs
+            - code [ref=e505]: "`MomentumStrategy`"
+            - text: — no LLM involved. Reasoning is generated directly from price arithmetic (
+            - 'link "`src/agent/strategy.ts` L61–L72" [ref=e506] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/strategy.ts#L61-L72
+              - code [ref=e507]: "`src/agent/strategy.ts`"
+              - text: L61–L72
+            - text: "). That's intentional: the template works out of the box without any API keys beyond Kraken."
+          - paragraph [ref=e508]:
+            - text: When you're ready to replace the strategy with a model, the codebase includes a ready-to-wire
+            - code [ref=e509]: "`LLMStrategy`"
+            - text: stub at
+            - 'link "`src/agent/strategy.ts` L90–L135" [ref=e510] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/strategy.ts#L90-L135
+              - code [ref=e511]: "`src/agent/strategy.ts`"
+              - text: L90–L135
+            - text: ":"
+          - code [ref=e513]: "// const response = await this.client.messages.create({ // model: \"claude-sonnet-4-6\", // max_tokens: 500, // messages: [{ // role: \"user\", // content: `You are a crypto trading agent. Here is the current market data: // Pair: ${data.pair} // Price: $${data.price} // 24h High: $${data.high}, Low: $${data.low} // Volume: ${data.volume} // VWAP: $${data.vwap} // // Respond with JSON: { action: \"BUY\"|\"SELL\"|\"HOLD\", amount: number, confidence: 0-1, reasoning: string }` // }] // });"
+          - paragraph [ref=e514]:
+            - text: Uncomment and fill in your client — the
+            - code [ref=e515]: "`reasoning`"
+            - text: field in the JSON response maps directly to
+            - code [ref=e516]: "`TradeDecision.reasoning`"
+            - text: ". The key constraint:"
+            - strong [ref=e517]: reasoning must reference actual market data values
+            - text: (price, volume, VWAP). This makes the explanation auditable — anyone can cross-check the claim against the historical market data.
+          - separator [ref=e518]
+          - 'heading "The `formatCheckpointLog()` function" [level=2] [ref=e519]':
+            - text: The
+            - code [ref=e520]: "`formatCheckpointLog()`"
+            - text: function
+          - paragraph [ref=e521]:
+            - 'link "`src/explainability/reasoner.ts` L56–L70" [ref=e522] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/reasoner.ts#L56-L70
+              - code [ref=e523]: "`src/explainability/reasoner.ts`"
+              - text: L56–L70
+            - text: — when a checkpoint is generated,
+            - code [ref=e524]: "`formatCheckpointLog()`"
+            - text: "produces a structured summary for the terminal:"
+          - code [ref=e526]: "──────────────────────────────────────────────────────────────────────── CHECKPOINT — BUY XBTUSD Agent: 0xabc...def Timestamp: 2024-01-15T10:30:00.000Z Amount: $100 Price: $95420.5 Confidence: 78% Reasoning: Upward momentum: price rose 0.62% over last 5 ticks... Sig: 0x1a2b3c4d5e6f7890...1234567890 Signer: 0xYourWalletAddress ────────────────────────────────────────────────────────────────────────"
+          - separator [ref=e527]
+          - heading "Reading a full tick in the terminal" [level=2] [ref=e528]
+          - paragraph [ref=e529]: "Here's what one complete tick looks like, annotated:"
+          - code [ref=e531]: "[agent] XBTUSD @ $66,391.2 ← live price fetch from Kraken [2026-03-28T12:27:05.553Z] HOLD XBTUSD @ $66,391.20 ← formatExplanation() output Confidence: 50% ← decision.confidence Reason: No clear momentum (-0.00% change). ← decision.reasoning (from your strategy) Holding current position. Market: bid=66391.2, ask=66391.3, ← raw market data at decision time spread=0.0002%, vol=2287.42 ──────────────────────────────────────────────────────────────────────── CHECKPOINT — HOLD XBTUSD ← formatCheckpointLog() output Agent: 1 ← agentId (ERC-721 token ID) Timestamp: 2026-03-28T12:27:05.000Z Amount: $0 ← $0 for HOLD, non-zero for BUY/SELL Price: $66391.2 Confidence: 50% Reasoning: No clear momentum (-0.00% change). ← same reasoning, now inside the signed payload Holding current position. Sig: 0x009aa74a5314926499...0d7940931c ← EIP-712 signature over all of the above Signer: 0x13Ef924EB7408e90278B86b659960AFb00DDae61 ← agentWallet address ──────────────────────────────────────────────────────────────────────── [agent] Checkpoint posted to ValidationRegistry: 0xca62bb0d47f2b53a1a... ← on-chain tx hash"
+          - paragraph [ref=e532]: "The sequence within each tick is:"
+          - list [ref=e533]:
+            - listitem [ref=e534]:
+              - 'link "`kraken.getTicker()`" [ref=e535] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L112
+                - code [ref=e536]: "`kraken.getTicker()`"
+              - text: — fetch live price from Kraken
+            - listitem [ref=e537]:
+              - 'link "`strategy.analyze(market)`" [ref=e538] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L116
+                - code [ref=e539]: "`strategy.analyze(market)`"
+              - text: — strategy returns a
+              - code [ref=e540]: "`TradeDecision`"
+              - text: (including
+              - code [ref=e541]: "`reasoning`"
+              - text: )
+            - listitem [ref=e542]:
+              - 'link "`formatExplanation()`" [ref=e543] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L119
+                - code [ref=e544]: "`formatExplanation()`"
+              - text: — prints the human-readable summary
+            - listitem [ref=e545]:
+              - 'link "`generateCheckpoint()`" [ref=e546] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L164
+                - code [ref=e547]: "`generateCheckpoint()`"
+              - text: — signs the decision with EIP-712; reasoning is hashed into the signature
+            - listitem [ref=e548]:
+              - 'link "`formatCheckpointLog()`" [ref=e549] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L174
+                - code [ref=e550]: "`formatCheckpointLog()`"
+              - text: — prints the signed checkpoint block
+            - listitem [ref=e551]:
+              - link "ValidationRegistry post" [ref=e552] [cursor=pointer]:
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L186
+              - text: — checkpoint hash submitted on-chain to Sepolia
+            - listitem [ref=e553]:
+              - 'link "`fs.appendFileSync()`" [ref=e554] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L193
+                - code [ref=e555]: "`fs.appendFileSync()`"
+              - text: — checkpoint appended to
+              - code [ref=e556]: "`checkpoints.jsonl`"
+          - separator [ref=e557]
+          - heading "The checkpoints.jsonl file" [level=2] [ref=e558]
+          - paragraph [ref=e559]:
+            - text: Every checkpoint is appended to
+            - code [ref=e560]: "`checkpoints.jsonl`"
+            - text: "at the project root. Each line is a JSON object:"
+          - code [ref=e562]: "{\"agentId\":\"0x...\",\"timestamp\":1704067200,\"action\":\"BUY\",\"asset\":\"XBT\",\"pair\":\"XBTUSD\",\"amountUsd\":100,\"priceUsd\":95420.5,\"reasoning\":\"Upward momentum...\",\"reasoningHash\":\"0x...\",\"confidence\":0.78,\"signature\":\"0x...\",\"signerAddress\":\"0x...\"}"
+          - paragraph [ref=e563]: "This file is your audit log. After a trading session you can:"
+          - list [ref=e564]:
+            - listitem [ref=e565]: Review every decision and the reasoning behind it
+            - listitem [ref=e566]:
+              - text: Verify any signature with
+              - 'link "`verifyCheckpoint()`" [ref=e567] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/checkpoint.ts#L116
+                - code [ref=e568]: "`verifyCheckpoint()`"
+            - listitem [ref=e569]:
+              - text: Check that reasoning strings weren't tampered with using
+              - 'link "`verifyReasoningIntegrity()`" [ref=e570] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/checkpoint.ts#L145
+                - code [ref=e571]: "`verifyReasoningIntegrity()`"
+          - separator [ref=e572]
+          - heading "Template note" [level=2] [ref=e573]
+          - blockquote [ref=e574]:
+            - paragraph [ref=e575]:
+              - strong [ref=e576]: "Why this matters:"
+              - text: The explanation layer is already wired into the agent loop, you don't need to call it manually. Your strategy's
+              - code [ref=e577]: "`reasoning`"
+              - text: field is the only input required. The stronger and more specific your reasoning strings, the more useful your agent's audit trail becomes — for debugging, for trust, and for building reputation over time.
+          - separator [ref=e578]
+          - 'heading "Part 6: EIP-712 Signed Checkpoints" [level=2] [ref=e579]'
+          - heading "What problem this solves" [level=2] [ref=e580]
+          - paragraph [ref=e581]: "Your agent writes \"I bought BTC because the momentum was strong\" to a log file. But a log file is just text, anyone could edit it. How do you prove that:"
+          - list [ref=e582]:
+            - listitem [ref=e583]: A specific agent made a specific decision
+            - listitem [ref=e584]: At a specific time
+            - listitem [ref=e585]: With a specific piece of reasoning
+            - listitem [ref=e586]: And that nothing was tampered with afterward?
+          - paragraph [ref=e587]:
+            - strong [ref=e588]: EIP-712 signatures
+            - text: solve this. Every trade decision is cryptographically signed by the agent's private key over structured data that includes all of the above.
+          - separator [ref=e589]
+          - heading "What EIP-712 is" [level=2] [ref=e590]
+          - paragraph [ref=e591]:
+            - text: EIP-712 is the Ethereum standard for signing
+            - strong [ref=e592]: typed structured data
+            - text: (as opposed to raw bytes). It produces human-readable signing prompts in wallets and prevents signature replay attacks across different contracts and chains.
+          - paragraph [ref=e593]: "A signature under EIP-712 proves:"
+          - list [ref=e594]:
+            - listitem [ref=e595]: The signer held the private key at signing time
+            - listitem [ref=e596]: The signed data has not been modified
+            - listitem [ref=e597]: The signature was intended for this specific contract + chain (via the domain separator)
+          - separator [ref=e598]
+          - heading "The checkpoint schema" [level=2] [ref=e599]
+          - paragraph [ref=e600]:
+            - 'link "`src/explainability/checkpoint.ts` L28–L41" [ref=e601] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/checkpoint.ts#L28-L41
+              - code [ref=e602]: "`src/explainability/checkpoint.ts`"
+              - text: L28–L41
+            - text: "defines the typed structure:"
+          - code [ref=e604]: "const domain = { name: \"AITradingAgent\", version: \"1\", chainId: 11155111, // Sepolia verifyingContract: REGISTRY_ADDRESS, }; const types = { TradeCheckpoint: [ { name: \"agentId\", type: \"uint256\" }, // ERC-721 token ID { name: \"timestamp\", type: \"uint256\" }, { name: \"action\", type: \"string\" }, { name: \"asset\", type: \"string\" }, { name: \"pair\", type: \"string\" }, { name: \"amountUsdScaled\", type: \"uint256\" }, // USD * 100 { name: \"priceUsdScaled\", type: \"uint256\" }, // USD * 100 { name: \"reasoningHash\", type: \"bytes32\" }, // keccak256(reasoning) { name: \"confidenceScaled\", type: \"uint256\" }, // confidence * 1000 { name: \"intentHash\", type: \"bytes32\" }, // hash of the approved TradeIntent ], };"
+          - paragraph [ref=e605]:
+            - text: Why
+            - code [ref=e606]: "`reasoningHash`"
+            - text: instead of the full reasoning string?
+          - list [ref=e607]:
+            - listitem [ref=e608]:
+              - text: "Strings can be arbitrarily long: hashing keeps the signed payload compact ("
+              - 'link "`checkpoint.ts` L69" [ref=e609] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/checkpoint.ts#L69
+                - code [ref=e610]: "`checkpoint.ts`"
+                - text: L69
+              - text: )
+            - listitem [ref=e611]:
+              - text: "The hash is a commitment: if you have the hash and the original string, you can verify they match ("
+              - 'link "`verifyReasoningIntegrity()`" [ref=e612] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/checkpoint.ts#L145
+                - code [ref=e613]: "`verifyReasoningIntegrity()`"
+              - text: )
+            - listitem [ref=e614]:
+              - text: The full reasoning string is stored alongside the checkpoint in
+              - code [ref=e615]: "`checkpoints.jsonl`"
+              - text: (
+              - 'link "`index.ts` L193" [ref=e616] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L193
+                - code [ref=e617]: "`index.ts`"
+                - text: L193
+              - text: )
+          - separator [ref=e618]
+          - heading "Generating a checkpoint" [level=2] [ref=e619]
+          - paragraph [ref=e620]:
+            - 'link "`src/explainability/checkpoint.ts` L59–L67" [ref=e621] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/checkpoint.ts#L59-L67
+              - code [ref=e622]: "`src/explainability/checkpoint.ts`"
+              - text: L59–L67
+            - text: ":"
+          - code [ref=e624]: "import { generateCheckpoint } from \"./src/explainability/checkpoint.js\"; const checkpoint = await generateCheckpoint( agentId, // uint256 ERC-721 token ID decision, // TradeDecision from your strategy market, // MarketData at decision time signer, // ethers.Wallet — the agent's signing key registryAddress, // AgentRegistry address (for domain separator) 11155111 // Sepolia chain ID ); // checkpoint.signature = \"0x1a2b3c...\" // checkpoint.signerAddress = \"0xYourWalletAddress\" // checkpoint.reasoningHash = keccak256(decision.reasoning)"
+          - paragraph [ref=e625]:
+            - text: Internally this calls
+            - code [ref=e626]: "`wallet.signTypedData(domain, types, value)`"
+            - text: ": ethers.js v6's EIP-712 signing method."
+          - separator [ref=e627]
+          - heading "Verifying a checkpoint" [level=2] [ref=e628]
+          - paragraph [ref=e629]: "Anyone can verify a checkpoint without trusting any intermediary:"
+          - code [ref=e631]: "import { verifyCheckpoint, verifyReasoningIntegrity } from \"./src/explainability/checkpoint.js\"; // 1. Verify the signature recovers to the expected signer const sigValid = verifyCheckpoint( checkpoint, registryAddress, 11155111, expectedSignerAddress ); console.log(`Signature valid: ${sigValid}`); // true // 2. Verify the reasoning string wasn't tampered with const reasoningValid = verifyReasoningIntegrity(checkpoint); console.log(`Reasoning hash matches: ${reasoningValid}`); // true"
+          - paragraph [ref=e632]:
+            - text: Under the hood this uses
+            - code [ref=e633]: "`ethers.verifyTypedData()`"
+            - text: ":"
+          - code [ref=e635]: const recovered = ethers.verifyTypedData(domain, CHECKPOINT_TYPES, value, checkpoint.signature); return recovered.toLowerCase() === expectedSigner.toLowerCase();
+          - separator [ref=e636]
+          - heading "Reading checkpoints from checkpoints.jsonl" [level=2] [ref=e637]
+          - code [ref=e639]: "import * as fs from \"fs\"; import { verifyCheckpoint } from \"./src/explainability/checkpoint.js\"; const lines = fs.readFileSync(\"checkpoints.jsonl\", \"utf8\").trim().split(\"\\n\"); const checkpoints = lines.map(l => JSON.parse(l)); for (const cp of checkpoints) { const valid = verifyCheckpoint(cp, registryAddress, 11155111, expectedSigner); console.log(`${new Date(cp.timestamp * 1000).toISOString()} | ${cp.action} ${cp.pair} | valid: ${valid}`); }"
+          - separator [ref=e640]
+          - heading "What you can build on top of this" [level=2] [ref=e641]
+          - paragraph [ref=e642]: "The signed checkpoint format is a foundation. With it you can:"
+          - list [ref=e643]:
+            - listitem [ref=e644]:
+              - strong [ref=e645]: On-chain verification
+              - text: ": a smart contract could call"
+              - code [ref=e646]: "`ecrecover`"
+              - text: to verify a checkpoint was produced by a registered agent before allowing an action
+            - listitem [ref=e647]:
+              - strong [ref=e648]: Reputation scoring
+              - text: ": aggregate checkpoint history to score agents by decision quality"
+            - listitem [ref=e649]:
+              - strong [ref=e650]: Dispute resolution
+              - text: ": if someone claims the agent made a bad decision, the signed checkpoint is the ground truth"
+            - listitem [ref=e651]:
+              - strong [ref=e652]: Compliance
+              - text: ": verifiable audit trail that specific reasoning led to specific trades"
+          - separator [ref=e653]
+          - heading "Template note" [level=2] [ref=e654]
+          - blockquote [ref=e655]:
+            - paragraph [ref=e656]:
+              - strong [ref=e657]: "Why this matters:"
+              - text: Checkpoint generation is automatic, the agent loop calls
+              - code [ref=e658]: "`generateCheckpoint()`"
+              - text: after every decision, including HOLDs. Every action your agent takes is cryptographically signed and tied to its registered
+              - code [ref=e659]: "`agentId`"
+              - text: ". This is the foundation for building on-chain reputation: a verifiable, tamper-proof history of decisions that anyone can audit."
+          - separator [ref=e660]
+          - 'heading "Part 7: Using This as a Reusable Template" [level=2] [ref=e661]'
+          - heading "The architecture in one picture" [level=2] [ref=e662]
+          - code [ref=e664]: "┌────────────────────────────────────────────────────────────────┐ │ YOUR STRATEGY (swap here) │ │ implements TradingStrategy { analyze(MarketData): TradeDecision } │ └──────────────────────────────┬─────────────────────────────────┘ │ TradeDecision ▼ ┌────────────────────────────────────────────────────────────────┐ │ FIXED SCAFFOLDING │ │ │ │ Identity ERC-8004 AgentRegistry (Sepolia) │ │ Vault Vault.allocatedCapital[agentId] │ │ Risk RiskRouter.validateTrade(agentId, size) │ │ Exchange Kraken REST API (paper or live) │ │ Explain formatExplanation(decision, market) │ │ Checkpoint EIP-712 signTypedData → checkpoints.jsonl │ └────────────────────────────────────────────────────────────────┘"
+          - paragraph [ref=e665]:
+            - text: Everything below the dashed line is provided by this template. You only need to implement
+            - code [ref=e666]: "`analyze()`"
+            - text: .
+          - separator [ref=e667]
+          - heading "How to swap in your own strategy" [level=2] [ref=e668]
+          - 'heading "Option A: Simple algorithmic strategy" [level=3] [ref=e669]'
+          - paragraph [ref=e670]:
+            - text: Implement
+            - 'link "`TradingStrategy`" [ref=e671] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/strategy.ts
+              - code [ref=e672]: "`TradingStrategy`"
+            - text: "directly:"
+          - code [ref=e674]: "// src/agent/my-strategy.ts import { MarketData, TradeDecision, TradingStrategy } from \"../types/index\"; export class MyStrategy implements TradingStrategy { async analyze(data: MarketData): Promise<TradeDecision> { // Your logic here — technical indicators, ML model, anything const action = data.price > data.vwap ? \"BUY\" : \"SELL\"; return { action, asset: \"XBT\", pair: data.pair, amount: 100, confidence: 0.7, reasoning: `Price ($${data.price}) is ${action === \"BUY\" ? \"above\" : \"below\"} VWAP ($${data.vwap.toFixed(2)}). ${action}.`, }; } }"
+          - paragraph [ref=e675]:
+            - text: Then in
+            - 'link "`src/agent/index.ts` L28 & L211" [ref=e676] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L28
+              - code [ref=e677]: "`src/agent/index.ts`"
+              - text: L28 & L211
+            - text: ", swap the strategy import:"
+          - code [ref=e679]: "// Before: import { MomentumStrategy } from \"./strategy\"; const strategy = new MomentumStrategy(5, 100); // After: import { MyStrategy } from \"./my-strategy.js\"; const strategy = new MyStrategy();"
+          - paragraph [ref=e680]: That's it. Everything else — identity, vault, risk checks, Kraken execution, checkpoints — runs unchanged.
+          - separator [ref=e681]
+          - 'heading "Option B: Claude API strategy" [level=3] [ref=e682]'
+          - paragraph [ref=e683]:
+            - text: Full stub in
+            - 'link "`src/agent/strategy.ts` L90" [ref=e684] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/strategy.ts#L90
+              - code [ref=e685]: "`src/agent/strategy.ts`"
+              - text: L90
+            - text: "— uncomment and fill in your client:"
+          - code [ref=e687]: "import Anthropic from \"@anthropic-ai/sdk\"; import { MarketData, TradeDecision, TradingStrategy } from \"../types/index\"; export class ClaudeStrategy implements TradingStrategy { private client = new Anthropic(); async analyze(data: MarketData): Promise<TradeDecision> { const response = await this.client.messages.create({ model: \"claude-sonnet-4-6\", max_tokens: 500, system: `You are a crypto trading agent. Respond ONLY with valid JSON matching: { action: \"BUY\"|\"SELL\"|\"HOLD\", amount: number, confidence: number, reasoning: string } reasoning must reference specific numbers from the market data.`, messages: [{ role: \"user\", content: `Analyze: pair=${data.pair} price=${data.price} high=${data.high} low=${data.low} vwap=${data.vwap} volume=${data.volume}`, }], }); const parsed = JSON.parse(response.content[0].type === \"text\" ? response.content[0].text : \"{}\"); return { ...parsed, asset: data.pair.replace(\"USD\", \"\"), pair: data.pair, }; } }"
+          - paragraph [ref=e688]:
+            - text: Add to
+            - code [ref=e689]: "`.env`"
+            - text: ":"
+            - code [ref=e690]: "`ANTHROPIC_API_KEY=your_key`"
+          - separator [ref=e691]
+          - 'heading "Option C: Groq / Llama strategy" [level=3] [ref=e692]'
+          - paragraph [ref=e693]:
+            - text: See also
+            - 'link "`src/agent/strategy.ts` L27" [ref=e694] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/strategy.ts#L27
+              - code [ref=e695]: "`src/agent/strategy.ts`"
+              - text: L27
+            - text: for the
+            - code [ref=e696]: "`MomentumStrategy`"
+            - text: "reference implementation:"
+          - code [ref=e698]: "import Groq from \"groq-sdk\"; import { MarketData, TradeDecision, TradingStrategy } from \"../types/index\"; export class GroqStrategy implements TradingStrategy { private client = new Groq({ apiKey: process.env.GROQ_API_KEY }); async analyze(data: MarketData): Promise<TradeDecision> { const completion = await this.client.chat.completions.create({ model: \"llama-3.3-70b-versatile\", messages: [ { role: \"system\", content: `Trading agent. Return JSON: { action, amount, confidence, reasoning }`, }, { role: \"user\", content: JSON.stringify({ pair: data.pair, price: data.price, high: data.high, low: data.low, vwap: data.vwap }), }, ], response_format: { type: \"json_object\" }, }); const parsed = JSON.parse(completion.choices[0].message.content || \"{}\"); return { ...parsed, asset: data.pair.replace(\"USD\", \"\"), pair: data.pair }; } }"
+          - separator [ref=e699]
+          - heading "What teams can customize" [level=2] [ref=e700]
+          - table [ref=e701]:
+            - rowgroup [ref=e702]:
+              - row "Layer Customizable? How" [ref=e703]:
+                - columnheader "Layer" [ref=e704]
+                - columnheader "Customizable?" [ref=e705]
+                - columnheader "How" [ref=e706]
+            - rowgroup [ref=e707]:
+              - 'row "Trading strategy / model ✅ Yes Implement `TradingStrategy`" [ref=e708]':
+                - cell "Trading strategy / model" [ref=e709]
+                - cell "✅ Yes" [ref=e710]
+                - 'cell "Implement `TradingStrategy`" [ref=e711]':
+                  - text: Implement
+                  - 'link "`TradingStrategy`" [ref=e712] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/strategy.ts#L27
+                    - code [ref=e713]: "`TradingStrategy`"
+              - 'row "Trading pair ✅ Yes `TRADING_PAIR` in `.env`" [ref=e714]':
+                - cell "Trading pair" [ref=e715]
+                - cell "✅ Yes" [ref=e716]
+                - 'cell "`TRADING_PAIR` in `.env`" [ref=e717]':
+                  - 'link "`TRADING_PAIR`" [ref=e718] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L41
+                    - code [ref=e719]: "`TRADING_PAIR`"
+                  - text: in
+                  - code [ref=e720]: "`.env`"
+              - 'row "Poll interval ✅ Yes `POLL_INTERVAL_MS` in `.env`" [ref=e721]':
+                - cell "Poll interval" [ref=e722]
+                - cell "✅ Yes" [ref=e723]
+                - 'cell "`POLL_INTERVAL_MS` in `.env`" [ref=e724]':
+                  - 'link "`POLL_INTERVAL_MS`" [ref=e725] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/agent/index.ts#L42
+                    - code [ref=e726]: "`POLL_INTERVAL_MS`"
+                  - text: in
+                  - code [ref=e727]: "`.env`"
+              - 'row "Risk parameters ✅ Yes `setRiskParams()` call" [ref=e728]':
+                - cell "Risk parameters" [ref=e729]
+                - cell "✅ Yes" [ref=e730]
+                - 'cell "`setRiskParams()` call" [ref=e731]':
+                  - 'link "`setRiskParams()`" [ref=e732] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/onchain/riskRouter.ts#L183
+                    - code [ref=e733]: "`setRiskParams()`"
+                  - text: call
+              - 'row "Agent metadata ✅ Yes Edit name/description/capabilities in `register-agent.ts`" [ref=e734]':
+                - cell "Agent metadata" [ref=e735]
+                - cell "✅ Yes" [ref=e736]
+                - 'cell "Edit name/description/capabilities in `register-agent.ts`" [ref=e737]':
+                  - text: Edit name/description/capabilities in
+                  - 'link "`register-agent.ts`" [ref=e738] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/scripts/register-agent.ts#L48
+                    - code [ref=e739]: "`register-agent.ts`"
+              - row "ERC-8004 identity scheme ❌ Fixed Same for all agents" [ref=e740]:
+                - cell "ERC-8004 identity scheme" [ref=e741]
+                - cell "❌ Fixed" [ref=e742]
+                - cell "Same for all agents" [ref=e743]
+              - row "Vault + RiskRouter contracts ❌ Fixed Same contracts, per-agent config" [ref=e744]:
+                - cell "Vault + RiskRouter contracts" [ref=e745]
+                - cell "❌ Fixed" [ref=e746]
+                - cell "Same contracts, per-agent config" [ref=e747]
+              - 'row "Kraken API client ❌ Fixed `src/exchange/kraken.ts`" [ref=e748]':
+                - cell "Kraken API client" [ref=e749]
+                - cell "❌ Fixed" [ref=e750]
+                - 'cell "`src/exchange/kraken.ts`" [ref=e751]':
+                  - 'link "`src/exchange/kraken.ts`" [ref=e752] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/exchange/kraken.ts
+                    - code [ref=e753]: "`src/exchange/kraken.ts`"
+              - 'row "EIP-712 checkpoint format ❌ Fixed `src/explainability/checkpoint.ts`" [ref=e754]':
+                - cell "EIP-712 checkpoint format" [ref=e755]
+                - cell "❌ Fixed" [ref=e756]
+                - 'cell "`src/explainability/checkpoint.ts`" [ref=e757]':
+                  - 'link "`src/explainability/checkpoint.ts`" [ref=e758] [cursor=pointer]':
+                    - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/explainability/checkpoint.ts#L28
+                    - code [ref=e759]: "`src/explainability/checkpoint.ts`"
+          - separator [ref=e760]
+          - heading "Checklist for a new team" [level=2] [ref=e761]
+          - list [ref=e762]:
+            - listitem [ref=e763]:
+              - code [ref=e764]: "`git clone https://github.com/Stephen-Kimoi/ai-trading-agent-template && cd ai-trading-agent-template`"
+            - listitem [ref=e765]:
+              - code [ref=e766]: "`npm install`"
+            - listitem [ref=e767]:
+              - code [ref=e768]: "`cp .env.example .env`"
+              - text: and fill in keys
+            - listitem [ref=e769]:
+              - code [ref=e770]: "`npx hardhat run scripts/deploy.ts --network sepolia`"
+              - text: — deploy contracts
+            - listitem [ref=e771]:
+              - text: Add all 5 contract addresses to
+              - code [ref=e772]: "`.env`"
+            - listitem [ref=e773]:
+              - code [ref=e774]: "`npm run register`"
+              - text: — register your agent on-chain
+            - listitem [ref=e775]:
+              - text: Add
+              - code [ref=e776]: "`AGENT_ID`"
+              - text: to
+              - code [ref=e777]: "`.env`"
+            - listitem [ref=e778]:
+              - text: Write your strategy in
+              - code [ref=e779]: "`src/agent/my-strategy.ts`"
+            - listitem [ref=e780]:
+              - text: Swap the strategy import in
+              - code [ref=e781]: "`src/agent/index.ts`"
+            - listitem [ref=e782]: "Run the agent and dashboard in two terminals:"
+          - code [ref=e784]: "npm run run-agent # Terminal 1 npm run dashboard # Terminal 2 → http://localhost:3000"
+          - separator [ref=e785]
+          - heading "Going to production" [level=2] [ref=e786]
+          - paragraph [ref=e787]: "When you're ready to trade for real:"
+          - list [ref=e788]:
+            - listitem [ref=e789]:
+              - text: Set
+              - code [ref=e790]: "`KRAKEN_SANDBOX=false`"
+              - text: in
+              - code [ref=e791]: "`.env`"
+            - listitem [ref=e792]: Ensure your vault has allocated capital for your agent
+            - listitem [ref=e793]:
+              - text: Set sensible risk params via
+              - 'link "`setRiskParams()`" [ref=e794] [cursor=pointer]':
+                - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/src/onchain/riskRouter.ts#L183
+                - code [ref=e795]: "`setRiskParams()`"
+            - listitem [ref=e796]:
+              - text: Monitor the dashboard (
+              - code [ref=e797]: "`npm run dashboard`"
+              - text: ) for live decisions and signed checkpoints
+            - listitem [ref=e798]:
+              - text: All checkpoints are also written to
+              - code [ref=e799]: "`checkpoints.jsonl`"
+              - text: for offline audit
+          - separator [ref=e800]
+          - heading "Dashboard" [level=2] [ref=e801]
+          - paragraph [ref=e802]:
+            - text: The project ships with a live web dashboard (
+            - 'link "`scripts/dashboard.ts`" [ref=e803] [cursor=pointer]':
+              - /url: https://github.com/Stephen-Kimoi/ai-trading-agent-template/blob/main/scripts/dashboard.ts
+              - code [ref=e804]: "`scripts/dashboard.ts`"
+            - text: ) that reads from
+            - code [ref=e805]: "`checkpoints.jsonl`"
+            - text: "and auto-refreshes every 5 seconds:"
+          - code [ref=e807]: "npm run dashboard # → http://localhost:3000"
+          - paragraph [ref=e808]: "It shows:"
+          - list [ref=e809]:
+            - listitem [ref=e810]:
+              - strong [ref=e811]: Live BTC price
+              - text: with tick-by-tick change
+            - listitem [ref=e812]:
+              - strong [ref=e813]: Last decision
+              - text: (HOLD / BUY / SELL) with colour indicator
+            - listitem [ref=e814]:
+              - strong [ref=e815]: Price chart
+              - text: of the last 20 ticks
+            - listitem [ref=e816]:
+              - strong [ref=e817]: Agent info
+              - text: — agentId, wallet, pair, checkpoint count
+            - listitem [ref=e818]:
+              - strong [ref=e819]: Checkpoint feed
+              - text: — every decision as a card with reasoning, confidence bar, and truncated EIP-712 signature
+          - paragraph [ref=e820]:
+            - text: Run it alongside
+            - code [ref=e821]: "`npm run run-agent`"
+            - text: for a complete view of the agent in action.
+          - separator [ref=e822]
+          - paragraph [ref=e823]: Congratulations — you have a production-ready AI trading agent with on-chain identity, risk controls, cryptographic explainability, and a live dashboard.
+          - generic [ref=e824]:
+            - generic [ref=e826]: S
+            - link "Steve Kimoi" [ref=e828] [cursor=pointer]:
+              - /url: /u/@kimoisteve
+    - generic [ref=e830]:
+      - heading "Upcoming AI Hackathons and Events" [level=2] [ref=e832]
+      - generic [ref=e834]:
+        - 'link "AI GENESIS Register HACKATHON OCT 26 - NOV 2 AI GENESIS AI Genesis is a global hybrid hackathon that brings AI builders together from around the world — starting online and culminating live at /function1 AI Conference & Exhibition 2026 in Dubai. 📅Oct 26 – Nov 3, 2026 • Oct 26 – Nov 2: Online build & collaboration All projects must be submitted by end of day on November 2. • Nov 2 (Online + Dubai): An exclusive on-site build day in Dubai for selected participants. • Nov 3 (Dubai): Live on-stage pitching & winners announcement at the /function1 Conference. 🌟 Get support from expert mentors throughout. 👥 Go solo or team up. 📍 Please note: If approved for the on-site experience, you’ll also have the opportunity to showcase your project live. Travel and accommodation will not be covered. 🧑🏻‍💻 Secure your spot now, sign up before the Kick-Off Stream!" [ref=e836] [cursor=pointer]':
+          - /url: /ai-hackathons/ai-genesis-2026
+          - img "AI GENESIS" [ref=e839]
+          - generic [ref=e841]: Register
+          - generic "HACKATHON" [ref=e843]:
+            - generic [ref=e844]: HACKATHON
+          - generic [ref=e846]:
+            - time [ref=e850]: OCT 26 - NOV 2
+            - heading "AI GENESIS" [level=2] [ref=e851]
+            - paragraph [ref=e852]: "AI Genesis is a global hybrid hackathon that brings AI builders together from around the world — starting online and culminating live at /function1 AI Conference & Exhibition 2026 in Dubai. 📅Oct 26 – Nov 3, 2026 • Oct 26 – Nov 2: Online build & collaboration All projects must be submitted by end of day on November 2. • Nov 2 (Online + Dubai): An exclusive on-site build day in Dubai for selected participants. • Nov 3 (Dubai): Live on-stage pitching & winners announcement at the /function1 Conference. 🌟 Get support from expert mentors throughout. 👥 Go solo or team up. 📍 Please note: If approved for the on-site experience, you’ll also have the opportunity to showcase your project live. Travel and accommodation will not be covered. 🧑🏻‍💻 Secure your spot now, sign up before the Kick-Off Stream!"
+        - 'link "AI Agent Olympics Hackathon Register HACKATHON MAY 13 - 20 AI Agent Olympics Hackathon ⏱️ Build the next generation of Autonomous Agents in the heart of Europe’s AI Revolution. 📅 May 13 – 20, 2026 May 13 – 19: Online Build Phase. May 19: Onsite Build Day. May 20: Demo Showcase & Awards Ceremony. 📍On-site Venue (May 19–20): Fiera Milano (Rho), Milan, Italy 🤝 Join solo or with a team. 🧑‍💻 Apply now to turn your autonomous agent into a market-ready enterprise solution." [ref=e854] [cursor=pointer]':
+          - /url: /ai-hackathons/milan-ai-week-hackathon
+          - img "AI Agent Olympics Hackathon" [ref=e857]
+          - generic [ref=e859]: Register
+          - generic "HACKATHON" [ref=e861]:
+            - generic [ref=e862]: HACKATHON
+          - generic [ref=e864]:
+            - time [ref=e868]: MAY 13 - 20
+            - heading "AI Agent Olympics Hackathon" [level=2] [ref=e869]
+            - paragraph [ref=e870]: "⏱️ Build the next generation of Autonomous Agents in the heart of Europe’s AI Revolution. 📅 May 13 – 20, 2026 May 13 – 19: Online Build Phase. May 19: Onsite Build Day. May 20: Demo Showcase & Awards Ceremony. 📍On-site Venue (May 19–20): Fiera Milano (Rho), Milan, Italy 🤝 Join solo or with a team. 🧑‍💻 Apply now to turn your autonomous agent into a market-ready enterprise solution."
+        - 'link "AI and Big Data Expo - Silicon Valley Hackathon Register HACKATHON MAY 11 - 19 AI and Big Data Expo - Silicon Valley Hackathon ⏱️ Build the next intelligent enterprise solution. 📅 May 11–19, 2026 • May 11 – 19: Online Build Phase. • May 18 (Hybrid Build Day – Online & Onsite) • May 19 (Demos & Awards – Online & Onsite) 🌍 Hybrid event. Join online from anywhere or build onsite at the venue. 🏆 Winners will be announced live on stage at the AI & Big Data Expo North America on May 19 📍 On-site Venue (May 18–19): San Jose McEnery Convention Center, CA, USA 🤝 Join solo or with a team. 🧑‍💻 Apply now to design, prototype, and showcase enterprise-ready innovation." [ref=e872] [cursor=pointer]':
+          - /url: /ai-hackathons/techex-intelligent-enterprise-solutions-hackathon
+          - img "AI and Big Data Expo - Silicon Valley Hackathon" [ref=e875]
+          - generic [ref=e877]: Register
+          - generic "HACKATHON" [ref=e879]:
+            - generic [ref=e880]: HACKATHON
+          - generic [ref=e882]:
+            - time [ref=e886]: MAY 11 - 19
+            - heading "AI and Big Data Expo - Silicon Valley Hackathon" [level=2] [ref=e887]
+            - paragraph [ref=e888]: "⏱️ Build the next intelligent enterprise solution. 📅 May 11–19, 2026 • May 11 – 19: Online Build Phase. • May 18 (Hybrid Build Day – Online & Onsite) • May 19 (Demos & Awards – Online & Onsite) 🌍 Hybrid event. Join online from anywhere or build onsite at the venue. 🏆 Winners will be announced live on stage at the AI & Big Data Expo North America on May 19 📍 On-site Venue (May 18–19): San Jose McEnery Convention Center, CA, USA 🤝 Join solo or with a team. 🧑‍💻 Apply now to design, prototype, and showcase enterprise-ready innovation."
+  - contentinfo "Footer navigation" [ref=e889]:
+    - heading "Footer navigation" [level=3] [ref=e890]
+    - generic [ref=e891]:
+      - generic [ref=e892]:
+        - generic [ref=e893]:
+          - img "Community innovating and building with artificial intelligence" [ref=e894]
+          - paragraph [ref=e895]: Unlocking state-of-the-art artificial intelligence and building with the world's talent
+          - list [ref=e897]:
+            - listitem [ref=e898]:
+              - link "Instagram" [ref=e899] [cursor=pointer]:
+                - /url: https://www.instagram.com/lablab.ai/
+                - generic [ref=e900]: Instagram
+                - img [ref=e901]
+            - listitem [ref=e903]:
+              - link "Reddit" [ref=e904] [cursor=pointer]:
+                - /url: https://www.reddit.com/r/lablabai/
+                - generic [ref=e905]: Reddit
+                - img [ref=e906]
+            - listitem [ref=e908]:
+              - link "Twitter/X" [ref=e909] [cursor=pointer]:
+                - /url: https://x.com/lablabai
+                - generic [ref=e910]: Twitter/X
+                - img [ref=e911]
+            - listitem [ref=e913]:
+              - link "GitHub" [ref=e914] [cursor=pointer]:
+                - /url: https://github.com/lablab-ai
+                - generic [ref=e915]: GitHub
+                - img [ref=e916]
+            - listitem [ref=e918]:
+              - link "Discord" [ref=e919] [cursor=pointer]:
+                - /url: https://discord.com/invite/XnxrJ8ytRs
+                - generic [ref=e920]: Discord
+                - img [ref=e921]
+            - listitem [ref=e924]:
+              - link "HackerNoon" [ref=e925] [cursor=pointer]:
+                - /url: https://hackernoon.com/u/lablab
+                - generic [ref=e926]: HackerNoon
+                - img [ref=e927]
+          - generic [ref=e929]:
+            - paragraph [ref=e930]: "Other group brands:"
+            - generic [ref=e931]:
+              - link "https://nativelyai.com" [ref=e932] [cursor=pointer]:
+                - /url: https://nativelyai.com
+                - img "https://nativelyai.com" [ref=e933]
+              - link "https://surge.lablab.ai/" [ref=e934] [cursor=pointer]:
+                - /url: https://surge.lablab.ai/
+                - img "https://surge.lablab.ai/" [ref=e935]
+        - generic [ref=e936]:
+          - generic [ref=e937]:
+            - text: Links
+            - list [ref=e938]:
+              - listitem [ref=e939]:
+                - link "AI Tech" [ref=e940] [cursor=pointer]:
+                  - /url: /tech
+              - listitem [ref=e941]:
+                - link "AI Hackathons" [ref=e942] [cursor=pointer]:
+                  - /url: /ai-hackathons
+              - listitem [ref=e943]:
+                - link "AI Tutorials" [ref=e944] [cursor=pointer]:
+                  - /url: /ai-tutorials
+              - listitem [ref=e945]:
+                - link "AI Applications" [ref=e946] [cursor=pointer]:
+                  - /url: /apps
+              - listitem [ref=e947]:
+                - link "Surge" [ref=e948] [cursor=pointer]:
+                  - /url: https://surge.lablab.ai/
+              - listitem [ref=e949]:
+                - link "AI Articles" [ref=e950] [cursor=pointer]:
+                  - /url: /ai-articles
+          - generic [ref=e951]:
+            - text: lablab
+            - list [ref=e952]:
+              - listitem [ref=e953]:
+                - link "About" [ref=e954] [cursor=pointer]:
+                  - /url: https://surge.lablab.ai/about
+              - listitem [ref=e955]:
+                - link "Brand" [ref=e956] [cursor=pointer]:
+                  - /url: /brand
+              - listitem [ref=e957]:
+                - link "Hackathon Guidelines" [ref=e958] [cursor=pointer]:
+                  - /url: /guide
+              - listitem [ref=e959]:
+                - link "Terms of Use" [ref=e960] [cursor=pointer]:
+                  - /url: /terms-of-use
+              - listitem [ref=e961]:
+                - link "Code of Conduct" [ref=e962] [cursor=pointer]:
+                  - /url: /code-of-conduct
+              - listitem [ref=e963]:
+                - link "Privacy Policy" [ref=e964] [cursor=pointer]:
+                  - /url: /privacy-policy
+          - generic [ref=e965]:
+            - text: Get in touch
+            - list [ref=e966]:
+              - listitem [ref=e967]:
+                - link "Discord" [ref=e968] [cursor=pointer]:
+                  - /url: https://discord.gg/lablabai
+              - listitem [ref=e969]:
+                - link "Sponsor" [ref=e970] [cursor=pointer]:
+                  - /url: /sponsor
+              - listitem [ref=e971]:
+                - link "Cooperation" [ref=e972] [cursor=pointer]:
+                  - /url: /cooperation
+              - listitem [ref=e973]:
+                - link "Contribute" [ref=e974] [cursor=pointer]:
+                  - /url: https://wkf.ms/3PQMLlq
+              - listitem [ref=e975]:
+                - link "community@lablab.ai" [ref=e976] [cursor=pointer]:
+                  - /url: mailto:community@lablab.ai
+      - generic [ref=e977]:
+        - paragraph [ref=e978]: © 2026 NativelyAI Inc. All rights reserved.
+        - paragraph [ref=e979]: 2.5.0
+  - generic:
+    - generic:
+      - generic:
+        - dialog:
+          - generic [ref=e983]:
+            - button [active] [ref=e985] [cursor=pointer]:
+              - img [ref=e986]
+            - link "Advertisement banner" [ref=e989] [cursor=pointer]:
+              - /url: https://lablab.ai/ai-hackathons/amd-developer?utm_medium=lablab_website&utm_source=banner&utm_campaign=amd_hackathon
+              - img "Advertisement banner" [ref=e990]

@@ -1,0 +1,12 @@
+{
+  "name": "sentinel-erc8004",
+  "version": "1.0.0",
+  "description": "Sentinel trading agent — OpenZeppelin contracts for Solidity compilation",
+  "private": true,
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  },
+  "scripts": {
+    "install-oz": "npm install"
+  }
+}

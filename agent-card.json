@@ -1,0 +1,34 @@
+{
+  "name": "Sentinel",
+  "description": "Trustless regime-adaptive trading agent. Detects trending vs sideways markets via ADX and switches between MACD momentum and Bollinger+RSI mean reversion strategies. All decisions logged via EIP-712 signed checkpoints on Base Sepolia.",
+  "version": "1.0.0",
+  "standard": "ERC-8004",
+  "chain": "base-sepolia",
+  "operatorWallet": "0x0f38EC46e5eb7A57cF5371cb259546DE0F896c0A",
+  "agentWallet": "0x0f38EC46e5eb7A57cF5371cb259546DE0F896c0A",
+  "capabilities": [
+    "trading",
+    "analysis",
+    "eip712-signing",
+    "regime-detection",
+    "risk-management"
+  ],
+  "strategies": [
+    "momentum_macd",
+    "mean_reversion_bollinger_rsi",
+    "regime_adaptive_ensemble"
+  ],
+  "riskParameters": {
+    "maxPositionPct": 0.05,
+    "maxDrawdownPct": 0.1,
+    "dailyLossLimitPct": 0.03,
+    "maxTradesPerHour": 10
+  },
+  "tradingPairs": [
+    "XBTUSD",
+    "ETHUSD"
+  ],
+  "dataSource": "kraken-cli",
+  "repository": "https://github.com/allanerissat/sentinel-trading-agent",
+  "registeredAt": "2026-04-01T12:25:00Z"
+}
